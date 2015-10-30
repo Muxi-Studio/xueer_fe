@@ -1,0 +1,10 @@
+{% extends "pages/base.html" %}
+{% block title %}学而{% endblock %}
+{% block head %}
+    {{ super() }}
+{% endblock %}
+{% block content %}
+    {% include 'components/index/banner.html' %}
+    {% include 'components/index/list.html' %}
+    {% include 'components/index/guess.html' %}
+{% endblock %}
