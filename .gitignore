@@ -1,3 +1,3 @@
-app/static/css/*.css
+app/static/css/.*
 app/src/node_modules
 app/src/.*
