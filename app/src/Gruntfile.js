@@ -13,6 +13,9 @@ module.exports = function(grunt) {
 
         // Task configuration.
         sass: {
+            options: { // Target options
+                style: 'compressed'
+            },
             dist: {
                 files: {
                     '../static/css/index.css': './scss/index.scss',

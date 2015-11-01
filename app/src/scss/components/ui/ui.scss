@@ -1,0 +1,6 @@
+@mixin button($width,$height,$radius){
+	width: $width;
+	line-height: $height;
+	border-radius: $radius;
+	text-align: center;
+}
