@@ -1,1 +1,2 @@
-<h2>我是list</h2>
+{% for class in top_list["0"] %}
+<a href="{{ class.url }}">{{ class.name}}</a> {% endfor %}
