@@ -1,0 +1,65 @@
+@import "common.scss";
+
+/***
+ xueer footer.scss
+ authored by zindex
+***/
+
+.footer {
+    border-top: 1px solid #eeeeee;
+    font-size: 16px;
+    color: $font_grey_light;
+}
+
+.footer {
+    .link {
+    	line-height:109px;
+    	height:109px;
+        width: 960px;
+        text-align: justify;
+        overflow: hidden;
+    }
+    .link:after {
+        content: "";
+        width:30%;
+        height: 0;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .item {
+        width: 30%;
+    }
+    .text_align_center {
+    	text-align: center;
+    }
+    .text_align_right {
+    	text-align: right;
+    }
+    .item {
+        .icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: $main_orange;
+            margin-right: 20px;
+            text-align: center;
+            line-height: 40px;  
+            font-size: 13px;
+        }
+        .text {
+            font-size: 16px;
+            color: $font_grey_light;
+        }
+    }
+    .icon{
+    	img{
+    		display:inline-block;
+    		vertical-align: middle;
+    	}
+    }
+    .copyright {
+        text-align: center;
+        line-height: 56px;
+        background-color: #eaeaea;
+    }
+}

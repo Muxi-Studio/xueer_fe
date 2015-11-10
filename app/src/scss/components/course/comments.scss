@@ -1,0 +1,82 @@
+@import "../common/common.scss";
+@import "../../components/ui/ui.scss";
+
+/***
+ xueer components/course/comments.scss
+ authored by zindex
+***/
+
+.comments{
+	width: 960px;
+}
+.comments{
+	.head{
+		width:100%;
+		border-bottom: 1px solid #eeeeee;
+		padding-bottom: 20px;
+	}
+	.head_txt{
+		font-size: 18px;
+		color:$font_grey_light;
+		border-left: 4px solid $main_orange;
+		height:20px;
+		padding-left: 11px;
+		line-height: 20px;
+	}
+	.comment{
+		padding:22px 15px 0px 15px;
+		border-bottom: 1px solid #eeeeee;
+	}
+	.comment{
+		.avatar{
+			display:inline-block;
+			width:59px;
+			height:59px;
+			border-radius: 50%;
+			overflow: hidden;
+			vertical-align: top;
+		}
+		.content{
+			display:inline-block;
+			vertical-align: top;
+			width:857px;
+			padding-left: 14px;
+		}
+		.top{
+			padding-top: 11px;
+			padding-bottom: 14px;
+			color:$main_green;
+		}
+		.top span{
+			display:inline-block;
+		}
+		.username{
+			font-size: 18px;
+			width:50%;
+			text-align: left;
+		}
+		.date{
+			font-size: 14px;
+			width:50%;
+			text-align: right;
+		}
+		.body{
+			font-size: 14px;
+			color:$font_grey_light;
+			line-height: 22px;
+			margin-bottom: 4px;
+		}
+		.like{
+			font-size: 14px;
+			color:$main_orange;
+			text-align: right;
+			margin-bottom: 20px;
+		}
+	}
+	.avatar img{
+		width:100%;
+	}
+	.pager{
+		margin-bottom: 65px;
+	}
+}

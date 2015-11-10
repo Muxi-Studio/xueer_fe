@@ -1,0 +1,11 @@
+{% extends "pages/base.html" %}
+{% block title %}{{ info.course_name }}-学而{% endblock %}
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" type="text/css" href="../../static/css/course.css">
+{% endblock %}
+{% block content %}
+    {% include 'components/course/info.html' %}
+    {% include 'components/course/comments.html' %}
+    <script src="../../static/js/comment_box.js"></script>
+{% endblock %}

@@ -1,0 +1,131 @@
+@import "../common/common.scss";
+@import "../ui/ui.scss";
+
+/***
+ xueer components/course/info.scss
+ authored by zindex
+***/
+
+.info {
+    width: 960px;
+}
+
+.info {
+    .banner {
+        width: 100%;
+        height: 200px;
+        position: relative;
+        margin-bottom: 10px;
+    }
+    .banner {
+        .course_banner {
+            width: 100%;
+            height: 200px;
+            display: block;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+        .text {
+            width: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: 1;
+            text-align: center;
+            line-height: 200px;
+            color: #fff;
+        }
+        .container {
+            line-height: 55px;
+        }
+        .course_name {
+            font-size: 32px;
+        }
+        .teacher {
+            font-size: 28px;
+        }
+    }
+    .tags {
+        width: 100%;
+    }
+    .tag {
+        margin-right: 20px;
+        padding: 0px 16px;
+        font-size: 16px;
+        @include tag();
+        cursor: pointer;
+    }
+    .tag:hover {
+        background-color: $main_orange;
+        border: 1px solid $main_orange;
+        color: #fff;
+    }
+    .like {
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 61px;
+    }
+    .like {
+        .count {
+            text-align: center;
+            height: 160px;
+            line-height: 160px;
+            color: $font_grey_light;
+        }
+        .num {
+            font-size: 50px;
+            color: $main_orange;
+        }
+        .count_text {
+            height: 60px;
+            line-height: 63px;
+            font-size: 24px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .margin_r {
+            margin-right: 40px;
+        }
+        .btns {
+            width: 100%;
+        }
+        .btns_btn {
+            width: 249px;
+            height: 58px;
+            border: 1px solid #eeeeee;
+            color: $font_grey_light;
+            line-height: 58px;
+        }
+        .like_btn {
+            border-left-width: 2px;
+        }
+        .comment_btn {
+            border-right-width: 2px;
+        }
+        .btn_text {
+        	height:100%;
+            font-size: 20px;
+            margin-left: 12px;
+            
+        }
+        .like_i{
+        	width:20px;
+        	height:18px;
+        }
+        .comment_i{
+        	width:24px;
+        	height:19px;
+        }
+    }
+    .like_btn{
+    	.btn_text{
+    		line-height: 61px;
+    	}
+    }
+    .comment_btn{
+    	.btn_text{
+    		line-height: 63px;
+    	}
+    }
+}

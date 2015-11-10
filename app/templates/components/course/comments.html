@@ -1,0 +1,42 @@
+<div class="comments margin_auto">
+    <div class="head">
+        <span class="head_txt">热门评论</span>
+    </div>
+    {% for comment in hot_comments %}
+    <div class="comment space">
+        <div class="avatar">
+            <img src="{{ comment.avatar }}" alt="avatar">
+        </div>
+        <div class="content">
+            <div class="top space">
+                <span class="username">
+					{{ comment.user_name }}
+				</span>
+                <span class="date">
+					{{ comment.date }}
+				</span>
+            </div>
+            <div class="body">
+                {{ comment.body }}
+            </div>
+            <div class="like">
+                赞同（{{ comment.like }}）
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    <div class="pager">
+    	<span class="item"><</span>
+    	<span class="item">上一页</span>
+    	<span class="item">1</span>
+    	<span class="item">2</span>
+    	<span class="item">3</span>
+    	<span class="item">4</span>
+    	<span class="item">下一页</span>
+    	<span class="item">></span>
+    </div>
+    <div class="head">
+        <span class="head_txt">写评论</span>
+    </div>
+    <div id="box">作业少 不点名 老师帅</div>
+</div>
