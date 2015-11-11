@@ -11,17 +11,18 @@
     "watch:css": "sass --watch scss/pages:../static/css",
     "bulid": "npm run bulid:css && npm run bulid:js",
     "watch": "parallelshell 'npm run watch:css' 'npm run watch:js' 'npm run livereload'",
-    "livereload": "live-reload --port 9091 ./" 
+    "livereload": "live-reload --port 9091 ./"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "babelify": "^6.3.0",  
+    "babelify": "^6.3.0",
     "browserify": "^12.0.1",
     "live-reload": "^1.1.0",
     "mockjs": "^0.1.10",
     "parallelshell": "^2.0.0",
     "react": "^0.14.2",
+    "react-addons-css-transition-group": "^0.14.2",
     "react-dom": "^0.14.2",
     "watch": "^0.16.0",
     "watchify": "^3.6.0"

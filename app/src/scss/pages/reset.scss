@@ -13,7 +13,7 @@ html,body,button,form,textarea,input,p,h1,h2,h3,h4,h5,h6{
 h1,h2,h3,h4,h5,h6{
 	font-size: 1rem;
 }
-input,button{
+input,button,textarea{
 	border: 0;
 	outline: 0;
 	box-sizing:content-box;
@@ -27,4 +27,7 @@ html{
 a{
 	color: #fff;
 	text-decoration: none;
+}
+textarea{
+	display:block;
 }

@@ -1,5 +1,19 @@
 @import "../components/common/header.scss";
 @import "../components/common/footer.scss";
-@import "../components/common/class.scss";  
+@import "../components/common/class.scss";
 @import "../components/course/info.scss";
 @import "../components/course/comments.scss";
+.tag {
+    margin-right: 20px;
+    padding: 0px 16px;
+    font-size: 16px;
+    @include tag();
+    cursor: pointer;
+    transition:all;
+}
+
+.tag:hover {
+    background-color: $main_orange;
+    border: 1px solid $main_orange;
+    color: #fff;
+}

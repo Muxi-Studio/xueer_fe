@@ -49,18 +49,6 @@
     .tags {
         width: 100%;
     }
-    .tag {
-        margin-right: 20px;
-        padding: 0px 16px;
-        font-size: 16px;
-        @include tag();
-        cursor: pointer;
-    }
-    .tag:hover {
-        background-color: $main_orange;
-        border: 1px solid $main_orange;
-        color: #fff;
-    }
     .like {
         width: 100%;
         margin-top: 10px;
