@@ -1,12 +1,18 @@
 ### 学而前端
 
-###bulid
+###build
 
-在`app/src/`下
+在`app/src/`下  
 
-`npm run bulid`
+安装依赖
+
+`npm install`   
 
 一键构建项目
+
+`npm run build` 
+
+
 
 ###watch
 在`app/src/`下
