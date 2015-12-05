@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:js": "browserify js/main.js -t babelify --outfile ../static/js/main.js",
-    "postbuild:js":"uglifyjs --compress  --output ../static/js/main.min.js -- ../static/js/main.js",
+    "postbuild:jsxx":"uglifyjs --compress  --output ../static/js/main.min.js -- ../static/js/main.js",
     "build:css": "node-sass  --output-style compressed scss/pages/ --output ../static/css",
     "watch:css": "watch 'npm run build:css' scss/*",
     "watch:js": "watch 'npm run build:js' js/",

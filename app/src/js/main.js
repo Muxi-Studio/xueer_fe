@@ -1,6 +1,29 @@
+/**
+ * main.js
+ *
+ * author by zindex
+ */
+'use strict';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
+var $ = require('./lib/lite_core.js');
+var banner = require('./banner.js');
+
+//init banner
+if (document.querySelector(".banner")){
+
+	var el = $(".banner");
+    var options = {
+         el: el
+    }
+    var index_banner = new banner(options);
+}
+
+/**
+ * React component for Comment Box
+ */
 
 class TagBox extends React.Component{
 	constructor(){
@@ -106,11 +129,11 @@ class CommentBox extends React.Component {
 
 
 
-var tags = document.querySelector(".comment_box").innerHTML.split(" ");
 
-ReactDOM.render( < CommentBox  hot_tags={tags}/> , document.querySelector(".comment_box"));
+if (document.querySelector(".comment_box")){
+	var tags = document.querySelector(".comment_box").innerHTML.split(" ");
+	ReactDOM.render( < CommentBox  hot_tags={tags}/> , document.querySelector(".comment_box"));
 
-
-	
+}
 
     

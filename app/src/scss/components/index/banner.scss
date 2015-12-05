@@ -1,7 +1,103 @@
+@import "../ui/ui.scss";
+@import "../common/common.scss";
+
 /***
  xueer component index_banner
  authored by xxx
 ***/
-.banner{}
-   
-             
+.banner{
+	width: 100%;
+	position:relative;
+	height: 352px;
+	.item{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width:100%;
+		height: 100%;
+		visibility: hidden;
+	}
+	.item img{
+		display: block;
+		margin: 0 auto;
+		width:960px;
+		min-height: 100%;
+	}
+	.current{
+		visibility:visible;
+	}
+	.dots_container{
+		position:relative;
+		margin: 0 auto;
+		width:960px;
+		height:100%;
+	}
+	.dots{
+		position: absolute;
+		right: 0px;
+		bottom: 40px;
+		z-index: 5;
+		width:65px;
+		height:15px;
+		.current_dot{
+			background-color: $main_orange;
+		}
+	}
+	.dot{
+		width:15px;
+		height:15px;
+		background-color: #fff;
+		border-radius: 50%;
+		margin-right: 10px;
+		display:inline-block;
+		vertical-align: top;
+		cursor: pointer;
+	}
+	.dot:hover{
+		background-color: $main_orange;
+	}
+	.last{
+		margin-right: 0px;
+	}
+	.ltr_prev{
+		animation:l_t_r_prev 2s;
+	}
+	.ltr_next{
+		animation:l_t_r_next 2s;
+	}
+	.rtl_next{
+		animation:r_t_l_prev 2s;
+	}
+	.rtl_prev{
+		animation:r_t_l_next 2s;
+	}
+	.top{
+		z-index: 3;
+	}
+
+}
+
+@keyframes l_t_r_prev{
+	to{
+		transform:translateX(100%);
+	}
+}	
+
+@keyframes l_t_r_next{
+	from{
+		transform:translateX(-100%);
+	}
+}
+
+@keyframes r_t_l_prev{
+	to{
+		transform:translateX(-100%);
+	}
+}
+
+@keyframes r_t_l_next{
+	from{
+		transform:translateX(100%);
+	}
+}
+

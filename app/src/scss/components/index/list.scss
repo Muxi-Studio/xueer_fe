@@ -7,6 +7,7 @@
  authored by zindex
 ***/
 .hot_courses{
+	padding-top:80px;
 	width: 800px;
 	.title{
 		width:144px;
@@ -47,8 +48,11 @@
 	.list{
 		padding-top: 5px;
 		.item{
-			border-bottom: 1px solid $font_grey_light;
+			border-bottom: 1px solid rgba(92,92,92,.2);
 			margin-bottom: 37px;
+		}
+		.item:last-child{
+			border-bottom:none;
 		}
 		.course_name{
 			margin-bottom: 10px;
