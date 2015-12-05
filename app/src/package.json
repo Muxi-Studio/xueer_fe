@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:js": "browserify js/comment_box.js -t babelify --outfile ../static/js/comment_box.js",
-    "build:css": "node-sass scss/pages/ --output ../static/css",
-    "watch:js": "watchify js/comment_box.js -t babelify --outfile ../static/js/comment_box.js -v",
+    "build:js": "browserify js/main.js -t babelify --outfile ../static/js/main.js",
+    "postbuild:js":"uglifyjs --compress  --output ../static/js/main.min.js -- ../static/js/main.js",
+    "build:css": "node-sass  --output-style compressed scss/pages/ --output ../static/css",
     "watch:css": "watch 'npm run build:css' scss/*",
+    "watch:js": "watch 'npm run build:js' js/",
     "build": "npm run build:css && npm run build:js",
     "watch": "parallelshell 'npm run watch:css' 'npm run watch:js' 'npm run livereload'",
     "livereload": "live-reload --port 9091 ./"

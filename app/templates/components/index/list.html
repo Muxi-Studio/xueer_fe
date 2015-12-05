@@ -1,1 +1,42 @@
-<h2>我是guess</h2>
+<div class="hot_courses margin_auto">
+	<div class="title margin_auto">课程热门排行</div>
+	<div class="lists space">
+		<div class="list ib">
+			{% for course in top_list %}
+				{%- if loop.index is even %}{% continue %}{% endif %}			
+			<div class="item">
+				<div class="course_name">
+					<a href="{{ top_list[0].url }}">{{ course.title}}</a>
+				</div>
+				<div class="info left">
+					<span class="teacher">BY&nbsp;&nbsp;{{ course.teacher}}</span>
+					<span class="likes space">
+						<span class="like_icon icon"></span>
+						<span class="like_text">{{ course.likes}}</span>
+					</span>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+		<div class="temp ib">
+			<div class="inner"></div>
+		</div>
+		<div class="list ib">
+			{% for course in top_list %}
+				{%- if loop.index is odd %}{% continue %}{% endif %}			
+			<div class="item">
+				<div class="course_name">
+					<a href="{{ top_list[0].url }}">{{ course.title}}</a>
+				</div>
+				<div class="info left">
+					<span class="teacher">BY&nbsp;&nbsp;{{ course.teacher}}</span>
+					<span class="likes space">
+						<span class="like_icon icon"></span>
+						<span class="like_text">{{ course.likes}}</span>
+					</span>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>

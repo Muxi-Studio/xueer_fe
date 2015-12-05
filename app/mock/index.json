@@ -1,1 +1,63 @@
-{"top_list":{"0":[{"name":"心理学心理学","url":"#"},{"name":"心理学","url":"#"},{"name":"心理学心理学","url":"#"},{"name":"心理学心理学","url":"#"},{"name":"心理学心理学","url":"#"},{"name":"心理学心理学","url":"#"}],"1":[{"name":"变态心理学","url":"#"},{"name":"变态心理学","url":"#"},{"name":"变态心理学","url":"#"},{"name":"变态心理学","url":"#"},{"name":"变态心理学","url":"#"},{"name":"变态心理学","url":"#"}],"2":[{"name":"变态心理学","url":"#"},{"name":"变态心理学","url":"#"},{"name":"变态心理学","url":"#"},{"name":"变态心理学","url":"#"},{"name":"变态心理学","url":"#"},{"name":"变态心理学","url":"#"}]},"recommend":[{"name":"心理学心理学心理学","teacher":"朱承浩","url":"#"},{"name":"心理学心理学","teacher":"朱承浩","url":"#"},{"name":"心理学心理学","teacher":"朱承浩","url":"#"},{"name":"心理学","teacher":"朱承浩","url":"#"},{"name":"心理学心理学","teacher":"朱承浩","url":"#"},{"name":"心理学心理学","teacher":"朱承浩","url":"#"}]}
+{
+    "top_list": [{
+        "title": "毛泽东思想与中国特色社会主义理论体系概论",
+        "teacher": "王大锤",
+        "url": "/course/1",
+        "likes": 30
+    }, {
+        "title": "毛泽东思想与中国特色社会主义理论体系概论",
+        "teacher": "王大锤",
+        "url": "/course/1",
+        "likes": 30
+    }, {
+        "title": "毛泽东思想与中国特色社会主义理论体系概论",
+        "teacher": "王大锤",
+        "url": "/course/1",
+        "likes": 30
+    }, {
+        "title": "毛泽东思想与中国特色社会主义理论体系概论",
+        "teacher": "王大锤",
+        "url": "/course/1",
+        "likes": 30
+    }, {
+        "title": "毛泽东思想与中国特色社会主义理论体系概论",
+        "teacher": "王大锤",
+        "url": "/course/1",
+        "likes": 30
+    }, {
+        "title": "毛泽东思想与中国特色社会主义理论体系概论",
+        "teacher": "王大锤",
+        "url": "/course/1",
+        "likes": 30
+    }, {
+        "title": "毛泽东思想与中国特色社会主义理论体系概论",
+        "teacher": "王大锤",
+        "url": "/course/1",
+        "likes": 30
+    }, {
+        "title": "毛泽东思想与中国特色社会主义理论体系概论",
+        "teacher": "王大锤",
+        "url": "/course/1",
+        "likes": 30
+    }, {
+        "title": "毛泽东思想与中国特色社会主义理论体系概论",
+        "teacher": "王大锤",
+        "url": "/course/1",
+        "likes": 30
+    }, {
+        "title": "毛泽东思想与中国特色社会主义理论体系概论",
+        "teacher": "王大锤",
+        "url": "/course/1",
+        "likes": 30
+    }],
+    "banner": [{
+        "url": "tips/1",
+        "img_url": "http://foo.com/a.png"
+    }, {
+        "url": "tips/1",
+        "img_url": "http://foo.com/a.png"
+    }, {
+        "url": "tips/1",
+        "img_url": "http://foo.com/a.png"
+    }]
+}

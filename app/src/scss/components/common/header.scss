@@ -1,5 +1,6 @@
 @import "common.scss";
 @import "../ui/ui.scss";
+@import "sprites.scss";
 
 /***
  xueer header.scss
@@ -21,77 +22,71 @@
     }
     .head {
         .logo {
-            width: 119px;
+            width: 126px;
             height: 56px;
-            background-image: url("../images/logo.png");
-            background-repeat: no-repeat;
-            background-size: cover;
-            margin-right: 69px;
+            @include sprite($logo);
+            margin-right: 47px;
         }
         .search {
-            width: 552px;
-            height: 50px;
-            margin-right: 78px;
+            width: 391px;
+            height: 40px;
+            margin-right: 60px;
         }
         .log_button {
             font-size: 18px;
-            @include button(56px,
-            35px,
+            @include button(102px,
+            40px,
             3px)
         }
         .login {
-            background-color: $main_green;
-            margin-right: 30px;
-        }
-        .reg {
             background-color: $main_orange;
         }
     }
     .search {
         .form {
             width: 100%;
-            line-height: 50px;
+            line-height: 40px;
         }
-        .input {
-            height: 46px;
-            width: 451px;
+        .input{
+            height: 38px;
+            width: 291px;
             border-radius: 3px 0px 0px 3px;
-            border: 2px solid $main_green;
+            border: 1px solid #ec6941;
             border-right: none;
             font-size: 18px;
             padding-left: 19px;
         }
         .search_button {
-            height: 46px;
-            width:76px;
-            background-color: $main_green;
-            border: 2px solid $main_green;
+            line-height: 40px;
+            height: 40px;
+            width:80px;
+            background-color: #ec6941;
             border-radius: 0px 3px 3px 0px;
             text-align: center;
         }
+        .search_icon{
+            width:26px;
+            height:26px;
+            @include sprite($search);
+        }
     }
 }
-
 .nav {
-    width: 100%;
-}
-
-.nav {
-    .container {
-        width: 960px;
-        line-height: 63px;
-    }
-    .container {
+    height:100%;
         .item {
-            line-height: 22px;
+            height:36px;
+            line-height:43px;
             font-size: 18px;
             color: $font_grey_light;
             border-bottom: 2px solid #fff;
-            margin-right: 50px;
+            margin-right: 46px;
+        }
+        .last{
+            margin-right: 73px;
         }
         .item:hover {
             color: $font_orange;
             border-bottom: 2px solid $font_orange;
         }
-    }
+
 }

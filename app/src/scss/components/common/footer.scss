@@ -8,7 +8,7 @@
 .footer {
     border-top: 1px solid #eeeeee;
     font-size: 16px;
-    color: $font_grey_light;
+    color: #fff;
 }
 
 .footer {
@@ -60,6 +60,6 @@
     .copyright {
         text-align: center;
         line-height: 56px;
-        background-color: #eaeaea;
+        background-color: $footer_bg;
     }
 }
