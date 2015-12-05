@@ -1,3 +1,4 @@
 app/src/node_modules
 app/src/.*
 *.log.*
+app/static/css/*.css.map
