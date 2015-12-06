@@ -28,12 +28,12 @@
 				<div class="course_name">
 					<a href="{{ top_list[0].url }}">{{ course.title}}</a>
 				</div>
-				<div class="info left">
-					<span class="teacher">BY&nbsp;&nbsp;{{ course.teacher}}</span>
+				<div class="info right">
 					<span class="likes space">
 						<span class="like_icon icon"></span>
 						<span class="like_text">{{ course.likes}}</span>
 					</span>
+					<span class="teacher">BY&nbsp;&nbsp;{{ course.teacher}}</span>
 				</div>
 			</div>
 			{% endfor %}

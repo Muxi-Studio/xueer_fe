@@ -26,11 +26,9 @@ function banner(options) {
     setInterval(slideInterval, 10000);
     return this;
 }
-
 var onClickHandler = function(e) {
    console.log("clicked!!")
 }
-
 var slide =function(){
 	isAnimating = true;
 	if (dir > 0){
@@ -41,7 +39,6 @@ var slide =function(){
 		$(items.e[next]).addClass(["rtl_next","current","top"]);
 	}
 }
-
 var onAnimationEnd = function(){
 	if(endingCount<1){
 		endingCount += 1;
@@ -59,7 +56,6 @@ var onAnimationEnd = function(){
 		endingCount = 0;
 	}
 }
-
 var slideInterval = function(){
 	if( !isAnimating ){
 		if(current == (items.e.length-1)){
@@ -71,16 +67,10 @@ var slideInterval = function(){
 		slide();
 	}
 }
-
 banner.prototype.defaults = {
     events: {
         'click .dot': onClickHandler,
         'animationend':onAnimationEnd
     }
 }
-
-banner.prototype.events = {
-
-}
-
 module.exports = banner;
