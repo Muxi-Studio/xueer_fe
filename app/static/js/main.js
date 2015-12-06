@@ -115,11 +115,9 @@ function banner(options) {
 	setInterval(slideInterval, 10000);
 	return this;
 }
-
 var onClickHandler = function onClickHandler(e) {
 	console.log("clicked!!");
 };
-
 var slide = function slide() {
 	isAnimating = true;
 	if (dir > 0) {
@@ -130,7 +128,6 @@ var slide = function slide() {
 		$(items.e[next]).addClass(["rtl_next", "current", "top"]);
 	}
 };
-
 var onAnimationEnd = function onAnimationEnd() {
 	if (endingCount < 1) {
 		endingCount += 1;
@@ -148,7 +145,6 @@ var onAnimationEnd = function onAnimationEnd() {
 		endingCount = 0;
 	}
 };
-
 var slideInterval = function slideInterval() {
 	if (!isAnimating) {
 		if (current == items.e.length - 1) {
@@ -160,16 +156,12 @@ var slideInterval = function slideInterval() {
 		slide();
 	}
 };
-
 banner.prototype.defaults = {
 	events: {
 		'click .dot': onClickHandler,
 		'animationend': onAnimationEnd
 	}
 };
-
-banner.prototype.events = {};
-
 module.exports = banner;
 
 },{"./lib/lite_core.js":2}],2:[function(require,module,exports){
