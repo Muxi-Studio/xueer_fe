@@ -1,0 +1,174 @@
+@import "../common/common.scss";
+@import "../../components/ui/ui.scss";
+
+/***
+ xueer components/course/comments.scss
+ authored by zindex
+***/
+
+.comments{
+	width: 960px;
+	margin-bottom: 215px;
+}
+.comments{
+	.head{
+		width:100%;
+		border-bottom: 1px solid #eeeeee;
+		padding-bottom: 20px;
+	}
+	.head_txt{
+		font-size: 18px;
+		color:$font_grey_light;
+		border-left: 4px solid $main_orange;
+		height:20px;
+		padding-left: 11px;
+		line-height: 20px;
+	}
+	.comment{
+		padding:22px 15px 0px 15px;
+		border-bottom: 1px solid #eeeeee;
+	}
+	.comment{
+		.avatar{
+			display:inline-block;
+			width:59px;
+			height:59px;
+			border-radius: 50%;
+			overflow: hidden;
+			vertical-align: top;
+		}
+		.content{
+			display:inline-block;
+			vertical-align: top;
+			width:857px;
+			padding-left: 14px;
+		}
+		.top{
+			padding-top: 11px;
+			padding-bottom: 14px;
+			color:$main_green;
+		}
+		.top span{
+			display:inline-block;
+		}
+		.username{
+			font-size: 18px;
+			width:50%;
+			text-align: left;
+		}
+		.date{
+			font-size: 14px;
+			width:50%;
+			text-align: right;
+		}
+		.body{
+			font-size: 14px;
+			color:$font_grey_light;
+			line-height: 22px;
+			margin-bottom: 4px;
+		}
+		.like{
+			font-size: 14px;
+			color:$main_orange;
+			text-align: right;
+			margin-bottom: 20px;
+		}
+	}
+	.avatar img{
+		width:100%;
+	}
+	.pager{
+		margin-bottom: 65px;
+	}
+	.comment_box{
+		.form{
+			width:100%;
+			margin-top: 40px;
+		}
+		.tag_head_text{
+			border-left-color: $main_green;
+			color:$main_green;
+		}
+		.textarea{
+			width:902px;
+			margin:0px 15px;
+			border:1px solid $font_grey_light;
+			height:199px;
+			overflow:auto;
+			padding: 9px 13px;
+			font-size: 14px;
+			color:$font_grey_light;
+			line-height: 20px;
+		}
+		.tags{
+			width:930px;
+			margin-top: 20px;
+			margin-bottom: 57px;
+			min-height: 23px;
+		}
+		.tags .tag{
+			vertical-align: top;
+		}
+		.hot_tags{
+			width:910px;
+			padding:37px 10px;
+			background-color:#f4f4f4;
+		}
+		.new_tag{
+			width:930px;
+			margin-top: 20px;
+			height:44px;
+		}
+		.new_tag_input{
+			width:582px;
+			height:42px;
+			border:1px solid $font_grey_light;
+			font-size: 16px;
+			color:$font_grey_light;
+			line-height: 42px;
+			padding-left: 16px;
+			vertical-align: top;
+			margin-right: 20px;
+		}
+		.new_tag_button{
+			width:40px;
+			height:40px;
+			display:inline-block;
+			vertical-align: top;
+			border:2px solid $font_grey_light;
+			border-radius: 50%;
+		}	
+		.comment_submit{
+			@include button(260px,44px,0);
+			background-color: $main_green;
+			display:block;
+			font-size: 24px;
+			line-height: 44px;
+			color:#fff;
+			margin:0 auto;
+			margin-top: 61px;
+		}
+		.comment_tags_input{
+			display:none;
+		}
+
+	}
+}
+
+.tags-enter {
+  opacity: 0.01;
+}
+
+.tags-enter.tags-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.tags-leave {
+  opacity: 1;
+}
+
+.tags-leave.tags-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}

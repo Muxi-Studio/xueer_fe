@@ -1,0 +1,92 @@
+@import "common.scss";
+@import "../ui/ui.scss";
+@import "sprites.scss";
+
+/***
+ xueer header.scss
+ authored by zindex
+***/
+
+.header {
+    width: 100%;
+    border-bottom: 1px solid $border_grey;
+}
+
+.header {
+    .container {
+        width: 960px;
+        margin: 0 auto;
+    }
+    .head {
+        line-height: 109px;
+    }
+    .head {
+        .logo {
+            width: 126px;
+            height: 56px;
+            @include sprite($logo);
+            margin-right: 47px;
+        }
+        .search {
+            width: 391px;
+            height: 40px;
+            margin-right: 60px;
+        }
+        .log_button {
+            font-size: 18px;
+            @include button(102px,
+            40px,
+            3px)
+        }
+        .login {
+            background-color: $main_orange;
+        }
+    }
+    .search {
+        .form {
+            width: 100%;
+            line-height: 40px;
+        }
+        .input{
+            height: 38px;
+            width: 291px;
+            border-radius: 3px 0px 0px 3px;
+            border: 1px solid #ec6941;
+            border-right: none;
+            font-size: 18px;
+            padding-left: 19px;
+        }
+        .search_button {
+            line-height: 40px;
+            height: 40px;
+            width:80px;
+            background-color: #ec6941;
+            border-radius: 0px 3px 3px 0px;
+            text-align: center;
+        }
+        .search_icon{
+            width:26px;
+            height:26px;
+            @include sprite($search);
+        }
+    }
+}
+.nav {
+    height:100%;
+        .item {
+            height:36px;
+            line-height:43px;
+            font-size: 18px;
+            color: $font_grey_light;
+            border-bottom: 2px solid #fff;
+            margin-right: 46px;
+        }
+        .last{
+            margin-right: 73px;
+        }
+        .item:hover {
+            color: $font_orange;
+            border-bottom: 2px solid $font_orange;
+        }
+
+}

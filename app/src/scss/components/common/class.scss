@@ -5,7 +5,13 @@
 	font-size: 0rem;
     -webkit-text-size-adjust:none;
 }
-.va_item{ 
+.va_item{  
 	display: inline-block;
 	vertical-align: middle;
+}
+.tc{
+	text-align: center;
+}
+.cp{
+	cursor:pointer;
 }

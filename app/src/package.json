@@ -1,16 +1,35 @@
 {
   "name": "xueer-fe",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "the front-end template of xueer desktop",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:js": "browserify js/main.js -t babelify --outfile ../static/js/main.js",
+    "postbuild:jsxx":"uglifyjs --compress  --output ../static/js/main.min.js -- ../static/js/main.js",
+    "build:css": "node-sass  --output-style compressed scss/pages/ --output ../static/css",
+    "watch:css": "watch 'npm run build:css' scss/*",
+    "watch:js": "watch 'npm run build:js' js/",
+    "build": "npm run build:css && npm run build:js",
+    "watch": "parallelshell 'npm run watch:css' 'npm run watch:js' 'npm run livereload'",
+    "livereload": "live-reload --port 9091 ./"
   },
-  "author": "",
+  "author": "Muxistudio FE team",
   "license": "ISC",
   "dependencies": {
-    "grunt": "^0.4.5",
-    "grunt-contrib-sass": "^0.9.2",
-    "grunt-contrib-watch": "^0.6.1"
+    "babelify": "^6.3.0",
+    "browserify": "^12.0.1",
+    "live-reload": "^1.1.0",
+    "mockjs": "^0.1.10",
+    "node-sass": "^3.4.2",
+    "parallelshell": "^2.0.0",
+    "react": "^0.14.2",
+    "react-addons-css-transition-group": "^0.14.2",
+    "react-dom": "^0.14.2",
+    "watch": "^0.16.0",
+    "watchify": "^3.6.0"
+  },
+  "devDependencies": {
+    "babelify": "^7.2.0"
   }
 }

@@ -1,16 +1,44 @@
 # coding: utf-8
 
+import json
 from flask import Flask
-from flask import render_template
-
+from flask import render_template,request
+from jinja2 import Environment
 
 app = Flask(__name__)
 
+app.jinja_env.add_extension('jinja2.ext.loopcontrols')
 
+
+def is_mobie():
+    platform = request.user_agent.platform
+    if platform in ["android", "iphone", "ipad"]:
+        return True
+    else:
+        return False
+      
 @app.route('/')
 def index():
-    return render_template("pages/index.html")
+	flag = is_mobie()
+	if flag:
+		return render_template("pages/mobie/index.html")
+	else:
+		with app.open_resource('mock/index.json') as f:
+			data = f.read()
+			json_dict = json.loads(data)
+		return render_template("pages/index.html", top_list=json_dict['top_list'],banner=json_dict['banner'])
+
+
+@app.route('/course')
+def course():
+    with app.open_resource('mock/course.json') as f:
+        data = f.read()
+        json_dict = json.loads(data)
+    return render_template("pages/course.html",info=json_dict['info'],hot_comments=json_dict['hot_comments'])
 
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+
+

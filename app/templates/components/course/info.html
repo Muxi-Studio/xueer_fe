@@ -1,0 +1,38 @@
+<div class="info margin_auto">
+    <div class="banner">
+        <img src="../../static/images/course_banner.png" alt="banner" class="course_banner" />
+        <div class="text">
+            <div class="container va_item">
+                <div class="course_name">
+                    {{ info.course_name }}
+                </div>
+                <div class="teacher">{{ info.teacher }}</div>
+            </div>
+        </div>
+    </div>
+    <div class="tags space">
+        {% for tag in info.tags %}
+        <div class="tag">
+            {{ tag }}
+        </div>
+        {% endfor %}
+    </div>
+    <div class="like">
+        <div class="count space">
+            <span class="count_text margin_r">这门课被</span>
+            <span class="num va_item margin_r">{{ info.like }}</span>
+            <span class="count_text">人所喜欢</span>
+        </div>
+        <div class="btns space tc">
+            <div class="like_btn btns_btn va_item space">
+            	<img src="../../static/images/heart.png" alt="heart" class="like_i va_item cp" />
+            	<span class="btn_text va_item cp">喜欢</span>
+            </div>
+            <a href="#comment_box" class="comment_btn btns_btn va_item">
+            	<img src="../../static/images/comment.png" alt="heart" class="comment_i va_item cp" />
+            	<span class="btn_text va_item cp">评价</a>
+            </a>
+        </div>
+    </div>
+</div>
+
