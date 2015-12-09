@@ -1,0 +1,114 @@
+.login {
+    width: 1000px;
+    height: 654px;
+    margin: 0px auto;
+    position: relative;
+    line-height: 26px;
+}
+
+.login>img {
+    position: absolute;
+    bottom: 0px;
+    right: 20px;
+}
+.login{
+	.content{
+		padding: 20px 43px 30px;
+		height: 414px;
+		width: 290px;
+		background: #fff;
+		position: absolute;
+		right: 80px;
+		bottom: 106px;
+		box-shadow: 2px 2px 0px #ffb75b;
+		border: 1px solid #666;
+	}
+	.log_option{
+		margin-bottom: 40px;
+		p{
+			color: #5c5c5c;
+			font-size: 22px;
+		}
+		p span{
+			cursor: pointer;
+			display: inline-block;
+			border-bottom: solid 2px #fff;
+
+		}
+		.third{
+			margin-right: 40px;
+			
+		} 
+		.line{
+			margin-top: 2px;
+			height: 20px;
+			width: 0px;
+			border: solid 1px #ec6941;
+		}
+		.my{
+			margin-left: 40px;
+			
+		}
+		p .third:hover,p .my:hover{
+			color: #ec6941;
+			border-bottom: solid 2px #ec6941;
+		}
+	}
+	form{
+		position: absolute;
+		    top: 100px;
+		input{
+			height: 54px;
+			width: 260px;
+			color: #aaa;
+			line-height: 56px;
+			padding: 0px 15px;
+			font-size: 20px;
+			margin: 10px 0px;
+			border: 1px solid #999;
+		}
+	}
+	.third_part{
+		.weibo img{
+			margin: 9px 21px 15px;
+		}
+		div{
+			height: 126px;
+			width: 145px;
+			display: inline-block;
+			img{
+				    margin: 12px 21px;
+			}
+			p{
+				font-size: 16px;
+				text-align: center;
+			}
+		}
+	}
+	.our_part{
+		p.forget{
+			line-height: 20px;
+			text-align: right;
+			color: #ec6941;
+			margin-right: 35px;
+		}
+		input[type=submit] {
+			background: #ec6941;
+			color: #fff;
+			margin-top: 40px;
+			border: 0;
+			cursor: pointer;
+		}
+		p.bottom_line{
+			text-align: center;
+			color: #4098d1;
+			font-size: 16px;
+			margin: 56px 42px 10px 0px;
+			
+			
+			a{
+				color: #ec6941;
+			}
+		}
+	}
+}
