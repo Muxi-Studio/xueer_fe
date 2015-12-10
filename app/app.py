@@ -36,6 +36,15 @@ def course():
         json_dict = json.loads(data)
     return render_template("pages/course.html",info=json_dict['info'],hot_comments=json_dict['hot_comments'])
 
+@app.route('/registe')
+def registe():
+   
+    return render_template("pages/registe.html")
+
+@app.route('/login')
+def login():
+    
+    return render_template("pages/login.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
