@@ -4,3 +4,4 @@ app/src/.*
 app/static/css/*.css
 app/static/css/*.css.map
 app/static/js/*.js
+*.log
