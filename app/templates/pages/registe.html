@@ -1,0 +1,12 @@
+{% extends "pages/base.html" %}
+{% block head %}
+	{{ super() }}
+	<link rel="stylesheet" type="text/css" href="../../static/css/registe.css">
+{% endblock %}
+{% block title %}登录{% endblock %}
+{% block content %}
+<div class="content">
+	{% include 'components/registe.html' %}
+</div>
+
+{% endblock %}
