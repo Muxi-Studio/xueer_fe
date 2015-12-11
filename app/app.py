@@ -37,6 +37,14 @@ def course():
     return render_template("pages/course.html",info=json_dict['info'],hot_comments=json_dict['hot_comments'])
 
 
+
+@app.route('/search-result')
+def search():
+    with app.open_resource('mock/search-result.json') as f:
+        data = f.read()
+        json_dict = json.loads(data)
+    return render_template("pages/search-result.html",result=json_dict['result'],number=json_dict['number'],courses=json_dict['courses'])
+
 if __name__ == "__main__":
     app.run(debug=True)
 
