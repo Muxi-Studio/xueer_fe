@@ -39,7 +39,7 @@ def course():
 @app.route('/registe')
 def registe():
    
-    return render_template("pages/registe.html")
+    return render_template("pages/register.html")
 
 @app.route('/login')
 def login():
