@@ -1,0 +1,9 @@
+{% extends "pages/base.html" %}
+{% block title %}学而{% endblock %}
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" type="text/css" href="../../static/css/search-result.css">
+{% endblock %}
+{% block content %}
+    {% include 'components/search-result/result.html' %}
+{% endblock %}
