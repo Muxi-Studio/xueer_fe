@@ -1,0 +1,93 @@
+@import "../ui/ui.scss";
+@import "../common/common.scss";
+
+/***
+ xueer component index_guess
+ authored by StephenLiu
+***/
+
+
+.result{
+	width: 960px;	
+}
+.result{
+	.nav_under{
+		background-color:  $footer_bg;
+		height: 50px;
+		position: absolute;
+		left: 0;
+		width: 100%;
+		margin-top: -30px;
+	}
+	.no-result{
+		margin-top: 40px;
+		width: 100%;
+	}
+	.head{
+		width: 100%;
+		border-bottom: 1px solid #eee;
+		margin-top: 30px;
+		padding-top:20px;
+	}
+	.head_txt{
+		font-size: 18px;
+		color: $font_grey_light;
+		border-left:10px solid $main_orange;
+		line-height: 60px;
+		height: 60px;
+		padding-left: 20px;
+	}
+	.list{
+		width: 100%;
+		line-height: 40px;
+		height: 40px;
+		margin-top: 12px;
+		font-size: 18px;
+		&:hover{
+			background-color: #d1c0a5;
+		}
+	}
+	.tittle{
+		width: 425px;
+		display: inline-block;
+	}
+	.list_tittle{
+		display: block;
+		color: $font_grey_light;
+		&:hover{
+			color: $footer_bg;
+		}
+	}
+	.author{
+		width: 450px;
+		display: inline-block;
+		
+	}
+	.list_author{
+		color:  $font_grey_light;
+		&:hover{
+			color: $footer_bg;
+		}
+	}
+	.like{
+		width: 70px;
+		display: inline-block;
+
+	}
+    .like_i{
+        width:20px;
+      	height:18px;
+    }
+    .pager{
+    	margin-top: 55px;
+    	border-top:1px solid #eee;
+    	line-height: 75px;
+    	height: 75px;
+    	text-align: right;
+    }
+    .item{
+    	margin-left:20px;
+    	color: $font_grey_light;
+    }	
+
+}

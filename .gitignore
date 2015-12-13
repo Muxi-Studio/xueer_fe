@@ -6,3 +6,8 @@ app/static/css/*.css.map
 app/static/js/*.js
 app/src/.sass-cache/**
 *.log
+**/.sass-cache
+**/.sass-cache/*
+**/*.log
+
+
