@@ -1,0 +1,34 @@
+{% extends "pages/base.html" %}
+{% block head %}
+	{{ super() }}
+	<link rel="stylesheet" type="text/css" href="static/css/register.css">
+{% endblock %}
+{% block title %}登录{% endblock %}
+{% block content %}
+<div class="content">
+	<div class="registe_box">
+	<div class="re_or_log">
+		<span class="register">注册学而</span>
+		<span class="login">已有账户？点击<a href="http://127.0.0.1:5000/login">登录</a></span>
+	</div>
+	<form action="***" method="get">
+		<div class="must">
+			<p class="name"><span>用户名: </span><input type="text" name="name" placeholder="昵称不可超过8字符" /></p>
+			<p><span>密码:    </span><input type="text" name="password" placeholder="密码不少于6位数" /></p>
+			<p><span>确认密码:</span><input type="text" name="ident" placeholder="在此确认您的密码" /></p>
+			<p class="e-mail"><span>电子邮箱:</span><input type="text" name="e-mail" placeholder="必填用于密码找回" /></p>
+		</div>
+		<hr />
+		<div class="option">
+			<p><span>QQ: </span><input type="text" name="name" placeholder="选填" /></p>
+			<p><span>联系电话:   </span><input type="text" name="password" placeholder="选填" /></p>
+			<p><span>所在专业:</span><input type="text" name="name" placeholder="选填" /></p>
+		</div>
+	  
+	  <input class="submit" type="submit" value="立即注册" />
+	</form>
+
+</div>
+</div>
+
+{% endblock %}
