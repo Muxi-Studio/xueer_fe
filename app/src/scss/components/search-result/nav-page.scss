@@ -1,0 +1,14 @@
+.pager{
+    &{
+        width: 960px;
+    	margin-top: 55px;
+    	border-top:1px solid #eee;
+    	line-height: 75px;
+    	height: 75px;
+    	text-align: right;
+    }
+    .item{
+    	margin-left:20px;
+    	color: $font_grey_light;
+    }	
+}
