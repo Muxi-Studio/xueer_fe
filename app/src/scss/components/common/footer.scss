@@ -37,7 +37,7 @@
     	text-align: right;
     }
     .item {
-        .icon {
+         .icon_c{
             width: 40px;
             height: 40px;
             border-radius: 50%;
@@ -50,6 +50,19 @@
         .text {
             font-size: 16px;
             color: $font_grey_light;
+        }
+        .icon{
+            width:24px;
+            height:24px;
+        }
+        .home{
+            @include sprite($home);
+        }
+        .weibo{
+            @include sprite($weibo);
+        }
+        .join{
+            @include sprite($join);
         }
     }
     .icon{
