@@ -4,6 +4,7 @@ import json
 from flask import Flask
 from flask import render_template,request
 from jinja2 import Environment
+from flask import jsonify
 
 app = Flask(__name__)
 
@@ -53,6 +54,13 @@ def search():
         data = f.read()
         json_dict = json.loads(data)
     return render_template("pages/search-result.html",result=json_dict['result'],number=json_dict['number'],courses=json_dict['courses'])
+
+@app.route('/api/hot_tags')
+def hot_tags():
+    with app.open_resource('mock/search-result.json') as f:
+        data = f.read()
+        json_dict = json.loads(data)
+    return jsonify(json_dict)
 
 if __name__ == "__main__":
     app.run(debug=True)
