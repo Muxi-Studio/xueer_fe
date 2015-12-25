@@ -14,6 +14,9 @@ import ReactDOM from 'react-dom';
 //import comment component
 var CommentBox = require("./comment.js");
 
+//import search component
+var SearchComponent = require("./search.js");
+
 //init banner
 if (document.querySelector(".banner")){
 	//init banner here!
@@ -22,8 +25,12 @@ if (document.querySelector(".banner")){
 //init comment box
 if (document.querySelector(".comment_box")){
 	var tags = document.querySelector(".comment_box").innerHTML.split(" ");
-	ReactDOM.render( < CommentBox  hot_tags={tags}/> , document.querySelector(".comment_box"));
+	ReactDOM.render( <CommentBox  hot_tags={tags}/> , document.querySelector(".comment_box"));
+}
 
+//init comment box
+if (document.querySelector("#input_warpper")){
+	ReactDOM.render( <SearchComponent/> , document.querySelector("#input_warpper"));
 }
 
     
