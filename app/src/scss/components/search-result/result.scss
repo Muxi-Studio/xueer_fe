@@ -47,11 +47,11 @@
 			background-color: #d1c0a5;
 		}
 	}
-	.tittle{
+	.title{
 		width: 425px;
 		display: inline-block;
 	}
-	.list_tittle{
+	.list_title{
 		display: block;
 		color: $font_grey_light;
 		&:hover{
@@ -78,16 +78,5 @@
         width:20px;
       	height:18px;
     }
-    .pager{
-    	margin-top: 55px;
-    	border-top:1px solid #eee;
-    	line-height: 75px;
-    	height: 75px;
-    	text-align: right;
-    }
-    .item{
-    	margin-left:20px;
-    	color: $font_grey_light;
-    }	
-
+    
 }
