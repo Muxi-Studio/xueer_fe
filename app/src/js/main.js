@@ -8,8 +8,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-//import banner component
-//var banner = require('./banner.js');
+// import banner component
+var banner = require('./banner.js');
 
 //import comment component
 var CommentBox = require("./comment.js");
