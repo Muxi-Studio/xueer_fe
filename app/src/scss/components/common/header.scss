@@ -13,11 +13,19 @@
 }
 
 .header {
+    .nav:after{
+        content: "";
+        display:inline-block;
+        vertical-align: middle;
+        width:0;
+        height:100%;
+    }
     .container {
         width: 960px;
         margin: 0 auto;
     }
     .head {
+        height:109px;
         line-height: 109px;
     }
     .head {
@@ -124,5 +132,4 @@
             color: $font_orange;
             border-bottom: 2px solid $font_orange;
         }
-
 }
