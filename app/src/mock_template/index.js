@@ -5,10 +5,10 @@ exports.obj = {
         'url':'/course/1',
         'likes':30
     }],
-    "banner|3":[
+    "banner|7":[
     	{
     		'url':"tips/1",
-            'img_url': "http://foo.com/a.png"
+            'img_url': "/static/images/banner.jpg"
     	}
     ]
 }

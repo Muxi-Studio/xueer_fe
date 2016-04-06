@@ -44,7 +44,6 @@ def register():
 
 @app.route('/login')
 def login():
-    
     return render_template("pages/login.html")
 
 
@@ -55,12 +54,36 @@ def search():
         json_dict = json.loads(data)
     return render_template("pages/search-result.html",result=json_dict['result'],number=json_dict['number'],courses=json_dict['courses'])
 
-@app.route('/api/hot_tags')
-def hot_tags():
-    with app.open_resource('mock/search-result.json') as f:
-        data = f.read()
-        json_dict = json.loads(data)
-    return jsonify(json_dict)
+@app.route('/api/hot_tags/<string:key_word>')
+def hot_tags(key_word):
+    key_word = key_word.encode('utf-8')
+    data_a = [
+        {
+            'title':'哈',
+            'url':'/login'
+        },
+        {
+            'title':'哈',
+            'url':'/login'
+        },
+    ]
+    data_b = [
+        {
+            'title':'哈哈',
+            'url':'/login'
+        },
+        {
+            'title':'哈哈',
+            'url':'/login'
+        },
+    ]
+    if (key_word == "哈"):
+        return json.dumps(data_a)
+    elif(key_word == "哈哈"):
+        return json.dumps(data_b)
+    else:
+        return json.dumps([])
+    return "",404
 
 if __name__ == "__main__":
     app.run(debug=True)

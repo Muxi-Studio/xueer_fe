@@ -34,11 +34,12 @@
 	}
 	.dots{
 		position: absolute;
-		right: 0px;
-		bottom: 40px;
-		z-index: 5;
-		width:65px;
-		height:15px;
+		bottom: 25px;
+		margin-left: -100px;
+		left: 50%;
+		height: 15px;
+		width: 200px;
+		text-align: center;
 		.current_dot{
 			background-color: $main_orange;
 		}
@@ -48,16 +49,13 @@
 		height:15px;
 		background-color: #fff;
 		border-radius: 50%;
-		margin-right: 10px;
 		display:inline-block;
 		vertical-align: top;
 		cursor: pointer;
+		margin: 5px;
 	}
 	.dot:hover{
 		background-color: $main_orange;
-	}
-	.last{
-		margin-right: 0px;
 	}
 	.ltr_prev{
 		animation:l_t_r_prev 2s;
