@@ -8,6 +8,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+//import css
+require("../scss/pages/index.scss");
+
 // import banner component
 var banner = require('./banner.js');
 
