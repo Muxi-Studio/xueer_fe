@@ -9,7 +9,7 @@
  * React component for Comment Box
  */
 import React from 'react';
-var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
+var  ReactCSSTransitionGroup = require('../node_modules/react/lib/ReactCSSTransitionGroup');
 
 class TagBox extends React.Component{
 	constructor(){

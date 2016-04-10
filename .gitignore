@@ -3,7 +3,7 @@ app/src/.*
 *.log.*
 app/static/css/*.css
 app/static/css/*.css.map
-app/static/js/*.js
+app/static/js/
 app/src/.sass-cache/**
 *.log
 **/.sass-cache
