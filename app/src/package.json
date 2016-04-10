@@ -13,7 +13,9 @@
   "license": "ISC",
   "dependencies": {
     "mockjs": "^0.1.10",
-    "react-addons-css-transition-group": "^15.0.1"
+    "react": "^15.0.1",
+    "react-addons-css-transition-group": "^15.0.1",
+    "react-dom": "^15.0.1"
   },
   "devDependencies": {
     "babel-core": "^6.5.2",
@@ -23,15 +25,13 @@
     "babelify": "^7.2.0",
     "css-loader": "^0.23.1",
     "express": "^4.13.4",
+    "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
     "jquery": "^2.1.4",
     "node-sass": "^3.4.2",
-    "react": "^0.14.8",
-    "react-dom": "^0.14.8",
     "sass-loader": "^3.1.2",
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.7",
     "webpack": "^1.12.13"
   }
-
 }
