@@ -1,42 +1,74 @@
 <div class="hot_courses margin_auto">
-	<div class="title margin_auto">课程热门排行</div>
 	<div class="lists space">
+		<div class="course_class margin_auto">公</div>
 		<div class="list ib">
 			{% for course in top_list %}
-				{%- if loop.index is even %}{% continue %}{% endif %}			
+				{%- if loop.index is even %}{% continue %}{% endif %}
 			<div class="item">
 				<div class="course_name">
+					<span class="list_tag"></span>
 					<a href="{{ top_list[0].url }}">{{ course.title}}</a>
 				</div>
 				<div class="info left">
-					<span class="teacher">BY&nbsp;&nbsp;{{ course.teacher}}</span>
-					<span class="likes space">
-						<span class="like_icon icon"></span>
-						<span class="like_text">{{ course.likes}}</span>
-					</span>
+					<span class="teacher">&nbsp;&nbsp;{{ course.teacher}}</span>
 				</div>
 			</div>
 			{% endfor %}
 		</div>
-		<div class="temp ib">
-			<div class="inner"></div>
-		</div>
+		<div class="more margin_auto cp">+</div>
+	</div>
+	<div class="lists space">
+		<div class="course_class margin_auto">公</div>
 		<div class="list ib">
 			{% for course in top_list %}
-				{%- if loop.index is odd %}{% continue %}{% endif %}			
+				{%- if loop.index is even %}{% continue %}{% endif %}
 			<div class="item">
 				<div class="course_name">
+					<span class="list_tag"></span>
 					<a href="{{ top_list[0].url }}">{{ course.title}}</a>
 				</div>
-				<div class="info right">
-					<span class="likes space">
-						<span class="like_icon icon"></span>
-						<span class="like_text">{{ course.likes}}</span>
-					</span>
-					<span class="teacher">BY&nbsp;&nbsp;{{ course.teacher}}</span>
+				<div class="info left">
+					<span class="teacher">&nbsp;&nbsp;{{ course.teacher}}</span>
 				</div>
 			</div>
 			{% endfor %}
 		</div>
+		<div class="more margin_auto cp">+</div>
+	</div>
+	<div class="lists space">
+		<div class="course_class margin_auto">公</div>
+		<div class="list ib">
+			{% for course in top_list %}
+				{%- if loop.index is even %}{% continue %}{% endif %}
+			<div class="item">
+				<div class="course_name">
+					<span class="list_tag"></span>
+					<a href="{{ top_list[0].url }}">{{ course.title}}</a>
+				</div>
+				<div class="info left">
+					<span class="teacher">&nbsp;&nbsp;{{ course.teacher}}</span>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+		<div class="more margin_auto cp">+</div>
+	</div>
+	<div class="lists space">
+		<div class="course_class margin_auto">公</div>
+		<div class="list ib">
+			{% for course in top_list %}
+				{%- if loop.index is even %}{% continue %}{% endif %}
+			<div class="item">
+				<div class="course_name">
+					<span class="list_tag"></span>
+					<a href="{{ top_list[0].url }}">{{ course.title}}</a>
+				</div>
+				<div class="info left">
+					<span class="teacher">&nbsp;&nbsp;{{ course.teacher}}</span>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+		<div class="more margin_auto cp">+</div>
 	</div>
 </div>

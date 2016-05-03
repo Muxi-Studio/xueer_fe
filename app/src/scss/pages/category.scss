@@ -1,0 +1,38 @@
+.class_container {
+	width: 1000px;
+	background: $main_white; 
+	padding-bottom: 330px;
+	margin-bottom: 90px;
+	.class_tags {
+		width: 356px;
+		height: 60px;
+		.class_tag:last-child {
+			margin: 0;
+		}
+	}
+	.classes_tags {
+		width: 730px;
+		padding: 30px 0;
+		.title {
+			margin: 0 73px;
+			font-size: 18px;
+			padding-left: 10px;
+			margin-bottom: 20px;
+			border-left: 5px solid $font_red_deep;
+		}
+	}
+	.tags {
+		width:240px;
+		text-align: center;
+		display: inline-block;
+		margin-bottom: 10px;
+	}
+	.tag_item {
+		display: inline-block;
+		padding: 6px 14px;
+		font-size: 18px;
+		font-weight: lighter;
+		color: $main_white; 
+		background: $main_green
+	}
+}

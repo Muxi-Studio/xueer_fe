@@ -1,21 +1,35 @@
-<div class="header">
+<div class="header shadow_bottom">
     <div class="container margin_auto">
         <div class="head space">
-            <div class="logo va_item icon"></div>
+            <svg class="logo va_item icon">
+                <use xlink:href="#xueer_logo"/>
+            </svg>
             <div class="nav va_item space">
-                <a href="/" class="item va_item">首页</a>
-                <a href="/courses" class="item va_item last">所有课程</a>
+                <a href="/" class="item va_item first">首页</a>
+                <a href="/course" class="item va_item last">分类查看</a>
             </div>
             <div class="search va_item">
                 <form action="#" class="form space">
-                    <div class="input_warpper va_item" id="input_warpper">
-                    </div>
+                    <input class="input_warpper va_item" id="input_warpper">
+                    </input>
                     <button type="submit" class="search_button va_item">
-                        <span class="icon search_icon va_item"></span>
+                        <svg class="icon search_icon va_item">
+                            <use xlink:href="#search">
+                        </svg>
                     </button>
                 </form>
             </div>
-            <a href="/login" class="login log_button va_item">登录/注册</a>
+            {% if page=="login"  or page=="register" %}
+                <svg class="rbt_logo va_item">
+                    <use xlink:href="#rbt_logo"/>
+                </svg>
+                <a href="/login" class="login log_button va_item">登录/注册</a>
+            {% else %}
+                <div class="rbt_logo va_item">
+                    
+                </div>
+                <a href="/login" class="login log_button va_item">退出</a>
+            {% endif %}
         </div>
     </div>
 </div>

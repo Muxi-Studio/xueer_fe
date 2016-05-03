@@ -17,7 +17,6 @@ def is_mobie():
         return True
     else:
         return False
-      
 @app.route('/')
 def index():
 	flag = is_mobie()
@@ -27,7 +26,7 @@ def index():
 		with app.open_resource('mock/index.json') as f:
 			data = f.read()
 			json_dict = json.loads(data)
-		return render_template("pages/index.html", top_list=json_dict['top_list'],banner=json_dict['banner'])
+		return render_template("pages/index.html", top_list=json_dict['top_list'],banner=json_dict['banner'],hot_five=json_dict['hot_five'], guess_courses=json_dict['guess_courses'])
 
 
 @app.route('/course')
@@ -40,11 +39,11 @@ def course():
 @app.route('/register')
 def register():
    
-    return render_template("pages/register.html")
+    return render_template("pages/register.html",page="register")
 
 @app.route('/login')
 def login():
-    return render_template("pages/login.html")
+    return render_template("pages/login.html",page="login")
 
 
 @app.route('/search-result')
@@ -53,6 +52,14 @@ def search():
         data = f.read()
         json_dict = json.loads(data)
     return render_template("pages/search-result.html",result=json_dict['result'],number=json_dict['number'],courses=json_dict['courses'])
+
+@app.route('/404')
+def not_found():
+    return render_template("pages/404.html")
+
+@app.route('/category')
+def classify():
+    return render_template("pages/category.html")
 
 @app.route('/api/hot_tags/<string:key_word>')
 def hot_tags(key_word):

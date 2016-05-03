@@ -9,7 +9,6 @@ exports.obj = {
 		'num' :01238
 	}],
 	"courses" : [{
-		
 	}]
 
 }

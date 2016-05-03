@@ -1,7 +1,6 @@
 var webpack = require("webpack");
 var path = require('path');
 var ExtractTextPlugin =require('extract-text-webpack-plugin');
-var CommonsChunkPlugin = require("webpack/lib/optimize/CommonsChunkPlugin");
 
 
 var isProduction = function(){
@@ -11,7 +10,11 @@ var isProduction = function(){
 var devConfig = {
 	cache: true,
 	entry: {
-		index: './js/main.js',
+		main: './js/main.js',
+		banner: './js/banner.js',
+		comment: './js/comment.js',
+		search: './js/search.js',
+		register: './js/register.js'
 	},
 	output: {
 		filename: "[name].bundle.js",
@@ -26,25 +29,16 @@ var devConfig = {
 			},
 			{
 				test: /\.scss$/,
-				loaders: ['style', 'css', 'sass']
-			},
-			{
-				test: /\.css$/,
-				loaders: ['style', 'css']
+  				loader: ExtractTextPlugin.extract("style","css!sass")
 			},
 			{
 				test: /\.json$/,
 				loader: 'json'
 			},
 			{
-		        test: /\.(jpe?g|png|gif|svg)$/,
-        		loader: 'url?limit=8024&name=images/[name].[ext]'
-			},
-			{
 		        test: /\.html$/,
        			loader: 'url?name=[name].[ext]'
 			}
-
 		]
 	},
 	resolve: {
@@ -59,11 +53,9 @@ var devConfig = {
 	plugins: [
 	  new webpack.NoErrorsPlugin(),
 	  new webpack.optimize.OccurenceOrderPlugin(),
-	  new ExtractTextPlugin("../static/css/[name].css"),
-	  new CommonsChunkPlugin("common.js",['main','banner','main','search']),
-
+	  new ExtractTextPlugin("../css/[name].css")
 	],
 	devtool: isProduction()?null:'source-map',
-}; 
+};
 
 module.exports = devConfig;

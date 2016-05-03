@@ -5,6 +5,8 @@
 body{
 	font-family: "Mircosoft YaHei","微软雅黑","Arial","Helvetica","PingFang SC","STHeiti","sans-serif";
 	line-height: 1;
+	min-width:1000px;
+	background:$bg_grey_color;
 }
 html,body,button,form,textarea,input,p,h1,h2,h3,h4,h5,h6{
 	margin: 0;

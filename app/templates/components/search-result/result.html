@@ -1,8 +1,7 @@
 <div class="result margin_auto">
 	{% if  courses %}
-	<div class="nav_under"></div>
 	{% else %}
-	<img src="../../static/images/noresult.png" alt="noresult" class="no-result va_item" />
+		<!-- 无搜索结果的处理 -->
 	{% endif %}
 	<div class="head">
 		<span class="head_txt">
@@ -13,20 +12,24 @@
 			{% endif %}
 		</span>
 	</div>
-	{% for lists in result %}
-	<div class="list space cp">
-		<div class="title">
-			<a href="#" class="list_title">《{{ lists.tittle }}》</a>
+	<div class="result_cont margin_b border_b">
+		{% for lists in result %}
+		<div div class="course_cont">
+			<div class="course_class">
+                公 
+            </div>
+            <div class="course_intro">
+				<a href="#" class="list_title">{{ lists.author }}<span class="line"></span>《{{ lists.tittle }}》</a>
+				<div class="course_mesg">{{ lists.messgae }}</div>
+			</div>	
+			<div class="like">
+				<div class="count">{{ lists.likes }}人</div>
+				<div class="like_text">喜欢</div>
+			</div>
 		</div>
-		<div class="author">
-			BY<a href="#" class="list_author">
-				{{ lists.author }}
-			</a>
-		</div>
-		<div class="like">
-			<img src="../../static/images/heart.png" alt="heart" class="like_i va_item cp" />
-			{{ lists.likes }}
-		</div>
+		{% endfor %}
+		{% block content %}
+		    {% include 'components/search-result/nav-page.html' %}
+		{% endblock %}
 	</div>
-	{% endfor %}
 </div>

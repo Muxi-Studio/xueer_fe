@@ -1,34 +1,36 @@
 {% extends "pages/base.html" %}
 {% block head %}
 	{{ super() }}
-	<link rel="stylesheet" type="text/css" href="static/css/register.css">
 {% endblock %}
 {% block title %}登录{% endblock %}
 {% block content %}
-<div class="content">
-	<div class="registe_box">
+<div class="registe_box margin_auto">
 	<div class="re_or_log">
-		<span class="register">注册学而</span>
-		<span class="login">已有账户？点击<a href="http://127.0.0.1:5000/login">登录</a></span>
+		<span class="register">注册</span>
+		<div class="login">已有账户？<a href="http://127.0.0.1:5000/login">返回登录</a></div>
 	</div>
 	<form action="***" method="get">
-		<div class="must">
-			<p class="name"><span>用户名: </span><input type="text" name="name" placeholder="昵称不可超过8字符" /></p>
-			<p><span>密码:    </span><input type="text" name="password" placeholder="密码不少于6位数" /></p>
-			<p><span>确认密码:</span><input type="text" name="ident" placeholder="在此确认您的密码" /></p>
-			<p class="e-mail"><span>电子邮箱:</span><input type="text" name="e-mail" placeholder="必填用于密码找回" /></p>
+		<div class="must margin_auto">
+			<div class="e-mail input_warpper">
+				<input class="input" type="text" id="user_email" name="e-mail" placeholder="登录邮箱" />
+				<div class="hint">邮箱是您登录的唯一账号，请谨慎填写</div>
+			</div>
+			<div class="name input_warpper">
+				<input class="input" type="text" id="user_name" name="name" placeholder="用户名（3-12字符，包括字母/数字/下划线）" />
+				<div class="hint">请输入3-12个字符的用户名（包括字母/数字/下划线）</div>
+			</div>
+			<div class="input_warpper">
+				<input class="input" type="text" id="passward" name="password" placeholder="设置密码" />
+				<div class="hint">请输入6位以上密码</div>
+			</div>
+			<div class="input_warpper">
+				<input class="input" type="text" id="repassward" name="ident" placeholder="确认密码" />
+				<div class="hint">请再次输入密码</div>
+			</div>
 		</div>
-		<hr />
-		<div class="option">
-			<p><span>QQ: </span><input type="text" name="name" placeholder="选填" /></p>
-			<p><span>联系电话:   </span><input type="text" name="password" placeholder="选填" /></p>
-			<p><span>所在专业:</span><input type="text" name="name" placeholder="选填" /></p>
-		</div>
-	  
-	  <input class="submit" type="submit" value="立即注册" />
+		<input class="submit margin_auto" id="submit" type="submit" value="马上注册" />
 	</form>
-
 </div>
-</div>
-
+<script src="/static/js/register.bundle.js"></script>
 {% endblock %}
+

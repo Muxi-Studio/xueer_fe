@@ -1,94 +1,80 @@
 @import "../ui/ui.scss";
 @import "../common/common.scss";
-@import "../common/sprites.scss";
 
 /***
  xueer component index_list
  authored by zindex
 ***/
+
 .hot_courses{
-	padding-top:80px;
-	width: 800px;
-	.title{
-		width:144px;
-		font-size: 24px;
-		color:$font_orange;
-		padding-bottom: 12px;
-		border-bottom: 2px solid $font_orange;
-		margin-bottom: 47px;
-	}
+	width: 1000px;
+	box-sizing: border-box;
+	padding: 40px 50px;
+	margin-bottom: 10px;
+	background: #FFFFFF;
 	.lists{
-		width:800px;
-		.list{
-			width:299px;
-			font-size: 24px;
+		width:220px;
+		display: inline-block;
+		vertical-align: top;
+		.more {
+			width: 24px;
+			height: 24px;
+			font-size: 21px;
+			line-height:24px;
+			text-align: center;
+			margin-top: 32px;
+			color: $main_green;
+			border: 2px solid $main_green;
+			border-radius: 13px;
 		}
-		.temp{
-			width:202px;
+		.list{
 			font-size: 24px;
 		}
 		a{
 			color:$font_grey_light;
 		}
 	}
-	.temp{
-		.inner{
-			margin:0 auto;
-			width:74px;
-			height:545px;
-			background-image:url('/static/images/index_temp.png');
-			background-size: contain;
-			background-repeat: no-repeat;
-		}
-	}
 	.ib{
 		display:inline-block;
 		vertical-align: top;
+		margin-top: 40px;
 	}
 	.list{
 		padding-top: 5px;
+		border-right: 2px solid $border_grey;
 		.item{
-			border-bottom: 1px solid rgba(92,92,92,.2);
+			width: 178px;
+			padding-right: 20px;
 			margin-bottom: 37px;
 		}
-		.item:last-child{
-			border-bottom:none;
+		.item:last-child {
+			margin-bottom: 0;
+		}
+		.list_tag{
+			display: inline-block;
+			border: 3px solid $font_black_deep;
+			border-radius: 3px;
+			margin-right: 5px;
 		}
 		.course_name{
+			font-size: 14px;
 			margin-bottom: 10px;
 			overflow:hidden;
 			white-space:nowrap;
 			text-overflow:ellipsis;
 		}
 		.info{
+			width: 100%;
 			font-size: 18px;
 			color:$font_grey_light;
 			margin-bottom: 33px;
-		}
-		.like_icon{
-			display:inline-block;
-			width:20px;
-			height:17px;
-			@include sprite($index_like);
-			vertical-align: -1px;
-			margin-right: 15px;
-		}
-		.like_text{
-			font-size: 18px;
-			display:inline-block;
-		}
-		.left{
-			text-align: right;
 			.teacher{
-				margin-right: 34px;
+				font-size: 12px;
+				margin-left: 10px;
 			}
 		}
-		.right{
-			text-align: left;
-			.likes{
-				margin-right: 34px;
-			}
+		.info:last-child {
+			margin-bottom: 0px;
 		}
-
 	}
 }

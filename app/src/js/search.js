@@ -1,6 +1,6 @@
 /**
  * search.js
- * 
+ *
  * authored by zindex
  */
 
@@ -13,7 +13,7 @@ var $ = require("jquery");
 class SearchBox extends React.Component{
 	constructor(){
 		super();
-	} 
+	}
 	render(){
 		return <input id="inputBox" type="text" className="input va_item" placeholder="课程名、标签" onFocus={this.props.onFocusHandler}  onBlur={this.props.onBlurHandler} onChange={this.props.onChangeHandler}/>
 	}
@@ -22,7 +22,7 @@ class SearchBox extends React.Component{
 class PopBox extends React.Component{
 	constructor(){
 		super();
-	} 
+	}
 	render(){
 		var styles = {
 			show:{
@@ -34,13 +34,12 @@ class PopBox extends React.Component{
 		}
 		return <div style={((!this.props.isFocus)&&(!this.props.isBoxClicked))?styles.hide:styles.show} className="pop_box">{ this.props.children }</div>
 	}
-	
 }
 
 class PopList extends React.Component{
 	constructor(){
 		super();
-	} 
+	}
 	render(){
 		var styles = {
 			show:{
@@ -52,13 +51,12 @@ class PopList extends React.Component{
 		}
 		return <div style={this.props.hasResult?styles.show:styles.hide} className="pop_list">{ this.props.children }</div>
 	}
-	
 }
 
 class PopListItem extends React.Component{
 	constructor(){
 		super();
-	} 
+	}
 	render(){
 		return <a className="item" href={ this.props.data.url }>{ this.props.data.title }</a>
 	}
@@ -67,7 +65,7 @@ class PopListItem extends React.Component{
 class TagBox extends React.Component{
 	constructor(){
 		super();
-	} 
+	}
 	render(){
 		return <div className="tag"><a href={ this.props.data.url }>{ this.props.data.title }</a></div>
 	}
@@ -76,7 +74,7 @@ class TagBox extends React.Component{
 class HotTags extends React.Component{
 	constructor(){
 		super();
-	} 
+	}
 	render(){
 		var styles = {
 			show:{
@@ -122,7 +120,7 @@ class SearchComponent extends React.Component{
 		if (ReactDOM.findDOMNode(this).contains(e.target)){
 			if (e.target.id !== "inputBox"){
 				this.setState({isBoxClicked:true})
-			}	
+			}
 		}else{
 			this.setState({isBoxClicked:false})
 		}
@@ -155,7 +153,7 @@ class SearchComponent extends React.Component{
 		return <div className="search_container">
 					<PopBox isFocus={this.state.isFocus} isBoxClicked={this.state.isBoxClicked} >
 						<HotTags isTyping={this.state.isTyping} hasResult={this.state.hasResult}>
-							
+
 						</HotTags>
 						<PopList hasResult={this.state.hasResult}>
 							{pop_list}

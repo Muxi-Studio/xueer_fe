@@ -1,6 +1,46 @@
+@import "../components/common/common.scss";
+@import "../components/common/reset.scss";
 @import "../components/common/header.scss";
 @import "../components/common/footer.scss";
 @import "../components/common/class.scss";
+@import "../components/course/info.scss";
+@import "../components/course/comments.scss";
 @import "../components/index/banner.scss";
 @import "../components/index/list.scss";
-@import "../components/index/guess.scss";  
+@import "../components/index/hot.scss";
+@import "../components/index/guess.scss";
+@import "../components/search-result/nav-page.scss";
+@import "../components/search-result/result.scss";
+@import "../components/ui/ui.scss";
+@import "login.scss";
+@import "register.scss";
+@import "404.scss";
+@import "category.scss";
+
+/* course.scss */
+.tag {
+    margin-right: 20px;
+    padding: 0px 16px;
+    font-size: 16px;
+    @include tag;
+    cursor: pointer;
+    transition:all;
+}
+
+.tag:hover {
+    background-color: $main_orange;
+    border: 2px solid $font_blue_light;
+    color: #fff; 
+}
+.pager {
+	margin-top: 40px;
+	.item {
+		color: $font_black_deep;
+	}
+	.current {
+		color: $main_orange;
+	}
+	.check_bt {
+		color: $main_white;
+	}
+}

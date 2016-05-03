@@ -7,86 +7,94 @@
 ***/
 
 .info {
-    width: 960px;
+    width: 1000px;
 }
-
-.info {
-    .banner {
-        width: 100%;
-        height: 200px;
-        position: relative;
-        margin-bottom: 10px;
+.course_info {
+    width: 678px;
+    .course_class {
+        display:inline-block;
     }
-    .banner {
-        .course_banner {
-            width: 100%;
-            height: 200px;
-            display: block;
-            position: absolute;
-            top: 0px;
-            left: 0px;
-        }
-        .text {
-            width: 100%;
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            z-index: 1;
-            text-align: center;
-            line-height: 200px;
-            color: #fff;
-        }
-        .container {
-            line-height: 55px;
-        }
-        .course_name {
-            font-size: 32px;
-        }
-        .teacher {
-            font-size: 28px;
-        }
+}
+.course_intro{
+    display: inline-block;
+    ul {
+        margin: 0;
+    }
+    .disc{
+        display: inline-block;
+        width: 0;
+        height: 0;
+        margin: 0 10px;
+        border: 4px solid $font_red_deep;
+        border-radius: 4px;
+    }
+    li{
+        list-style: none;
+        font-weight: 400;
+        line-height: 30px;
+    }
+    .course_name {
+        font-size: 18px;
+    }
+    .teacher_name {
+        font-size: 14px;
+    }
+    .course_message{
+        font-size: 14px;
+        font-weight: lighter;
+        line-height: 20px;
+        width: 504px;
+        margin-left: 70px;
+        margin-top: 10px;
+    }
+}
+.info {
+    .course {
+        background: #FFFFFF;
+        padding: 40px 30px 40px 90px;
+        display:inline-block;
+        width: 800px;
+        box-sizing: border-box;
+        margin-right:10px;
     }
     .tags {
-        width: 100%;
+        color: #FFFFFF;
+        margin-top: 26px;
+        padding-left: 160px;
+        text-align: center;
+        font-weight: lighter;
+        .tag {
+            background: $main_orange;
+        }
     }
     .like {
-        width: 100%;
-        margin-top: 10px;
-        margin-bottom: 61px;
-    }
-    .like {
+        width: 185px;
+        display:inline-block;
+        vertical-align: top;
+        background: #FFFFFF;
+        .like_bt {
+            padding: 20px 76px 26px 78px;
+            background: $font_red_deep;
+            font-size: 36px;
+            color: #FFFFFF;
+        }
+        .like_bt:hover{
+            color: $font_blue_light;
+        }
         .count {
             text-align: center;
-            height: 160px;
-            line-height: 160px;
             color: $font_grey_light;
+            padding: 38px 40px 22px 40px;
         }
         .num {
-            font-size: 50px;
+            font-size: 24px;
             color: $main_orange;
         }
         .count_text {
-            height: 60px;
-            line-height: 63px;
-            font-size: 24px;
+            font-size: 18px;
+            font-weight: lighter;
             display: inline-block;
             vertical-align: middle;
-        }
-        .margin_r {
-            margin-right: 40px;
-        }
-        .btns {
-            width: 100%;
-        }
-        .btns_btn {
-            width: 249px;
-            height: 58px;
-            border: 1px solid #eeeeee;
-            color: $font_grey_light;
-            line-height: 58px;
-        }
-        .like_btn {
-            border-left-width: 2px;
         }
         .comment_btn {
             border-right-width: 2px;
@@ -96,6 +104,9 @@
             font-size: 20px;
             margin-left: 12px;
             
+        }
+        .margin_b{
+            margin-bottom: 10px;
         }
         .like_i{
         	width:20px;

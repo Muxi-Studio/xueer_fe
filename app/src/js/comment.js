@@ -9,20 +9,20 @@
  * React component for Comment Box
  */
 import React from 'react';
+import ReactDOM from 'react-dom';
 var  ReactCSSTransitionGroup = require('../node_modules/react/lib/ReactCSSTransitionGroup');
 
 class TagBox extends React.Component{
 	constructor(){
 		super();
 		this._onClickHandler = this._onClickHandler.bind(this);
-	} 
+	}
 	_onClickHandler(){
 		this.props._onClickedHandler(this.props.data,this.props.id||null);
 	}
 	render(){
 		return <span className="tag" onClick={this._onClickHandler}>{ this.props.data }</span>
 	}
-	
 }
 
 class Tags extends React.Component{
@@ -30,33 +30,31 @@ class Tags extends React.Component{
 	render(){
 		return <div className="tags margin_auto space">{ this.props.children }</div>
 	}
-	
 }
 
 class HotTags extends React.Component{
 	constructor(){
 		super();
 		this._onClickedHandler = this._onClickedHandler.bind(this);
-	} 
+	}
 	_onClickedHandler (data){
 		this.props._onAddHandler(data);
 	}
 	render(){
 		return <div className="hot_tags margin_auto space">{ this.props.children }</div>
 	}
-	
 }
 
 class NewTag extends React.Component{
 	constructor(){
 		super();
 		this._onClickHandler = this._onClickHandler.bind(this);
-	} 
-	_onClickHandler(){	
+	}
+	_onClickHandler(){
 		var value = this.refs.input.value;
 		if(value){
 			this.props._onClickedHandler(value);
-		}	
+		}
 		this.refs.input.value = null;
 	}
 	render(){
@@ -65,17 +63,16 @@ class NewTag extends React.Component{
 				<span className="new_tag_button cp" onClick={this._onClickHandler}></span>
 			   </div>
 	}
-	
 }
 
-//main box component 
+//main box component
 class CommentBox extends React.Component {
 	constructor(){
 		super();
 		this.state = {tags:[]};
 		this._onAddDataHandler = this._onAddDataHandler.bind(this);
 		this._onDeleteDataHandler = this._onDeleteDataHandler.bind(this);
-	} 
+	}
 	_onAddDataHandler(val){
 		var arr = this.state.tags
 		for(var i=0;i<arr.length;i++){
@@ -110,7 +107,15 @@ class CommentBox extends React.Component {
     				<input type="text" value={ this.state.tags.join(" ")} className="comment_tags_input"></input>
     				<button type="submit" className="comment_submit">发布评论</button>
      			</form>
-  } 
+  }
+}
+//init comment box
+if (document.querySelector(".comment_box")){
+	var tags = document.querySelector(".comment_box").innerHTML.split(" ");
+	ReactDOM.render( <CommentBox  hot_tags={tags}/> , document.querySelector(".comment_box"));
 }
 
-module.exports = CommentBox;
+//init comment box
+if (document.querySelector("#input_warpper")){
+	ReactDOM.render( <SearchComponent/> , document.querySelector("#input_warpper"));
+}

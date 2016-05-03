@@ -1,5 +1,4 @@
 @import "common.scss";
-@import "../common/sprites.scss";
 
 /***
  xueer footer.scss
@@ -7,73 +6,41 @@
 ***/
 
 .footer {
+	width: 100%;
+	min-width: 1000px;
     border-top: 1px solid #eeeeee;
     font-size: 16px;
     color: #fff;
+    position: absolute;
 }
 
 .footer {
-    .link {
-    	line-height:109px;
-    	height:109px;
-        width: 960px;
-        text-align: justify;
-        overflow: hidden;
-    }
-    .link:after {
-        content: "";
-        width:30%;
-        height: 0;
-        display: inline-block;
-        vertical-align: middle;
-    }
-    .item {
-        width: 30%;
-    }
-    .text_align_center {
-    	text-align: center;
-    }
-    .text_align_right {
-    	text-align: right;
-    }
-    .item {
-         .icon_c{
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: $main_orange;
-            margin-right: 20px;
-            text-align: center;
-            line-height: 40px;  
-            font-size: 13px;
-        }
-        .text {
-            font-size: 16px;
-            color: $font_grey_light;
-        }
-        .icon{
-            width:24px;
-            height:24px;
-        }
-        .home{
-            @include sprite($home);
-        }
-        .weibo{
-            @include sprite($weibo);
-        }
-        .join{
-            @include sprite($join);
-        }
-    }
-    .icon{
-    	img{
-    		display:inline-block;
-    		vertical-align: middle;
-    	}
-    }
     .copyright {
         text-align: center;
-        line-height: 56px;
-        background-color: $footer_bg;
+        height:120px;
+        background-color: $font_black_deep;
     }
+    .robbit{
+		width: 303px;
+		height: 35px;
+		margin-bottom: 10px;
+	}
+	.about{
+		padding-top: 30px;
+		font-family: PingFang SC;
+		font-size: 14px;
+		color: #9B9B9B;
+        font-weight: lighter;
+        .muxi{
+        	letter-spacing: 5px;
+        	word-spacing: 5px;
+        }
+		.line{
+			width: 3px;
+			height: 10px;
+			background: $font_red_deep;
+			border-radius: 1.5px;
+			margin:0 10px;
+		}
+	}
 }

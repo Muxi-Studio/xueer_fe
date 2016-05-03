@@ -1,6 +1,44 @@
-@import "../ui/ui.scss";
-@import "../common/common.scss";
-/***
- xueer component index_guess
- authored by xxx
-***/
+.guess_cont {
+	padding: 5px 0 110px;
+	font-weight: lighter;
+	color: #FFFFFF;
+	.outer {
+		width: 165px;
+		display: inline-block;
+		margin-right: 10px;
+		.hover_rbt {
+			width: 60px;
+			height: 30px;
+			display: block;
+			visibility:hidden;
+			margin-bottom: -2px;
+		}
+		.course_about {
+			width: 167px;
+			height: 107px;
+			margin-right: 15px;
+			background: $bg_red_light;
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+		}
+		.course_about:hover {
+			background: $font_red_deep;
+		}
+		.class_name {
+			font-size: 18px;
+			margin-bottom: 7px;
+		}
+		.teacher {
+			font-size: 12px;
+		}
+	}
+	.outer:hover {
+		.hover_rbt {
+			visibility: visible;
+		}
+	}
+	.outer:last-child {
+		margin-right: 0;
+	}
+}

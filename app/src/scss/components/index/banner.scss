@@ -5,8 +5,10 @@
  xueer component index_banner
  authored by xxx
 ***/
+
 .banner{
-	width: 100%;
+	width: 1000px;
+	overflow: hidden;
 	position:relative;
 	height: 352px;
 	.item{
@@ -20,7 +22,7 @@
 	.item img{
 		display: block;
 		margin: 0 auto;
-		width:960px;
+		width: 1000px;
 		min-height: 100%;
 	}
 	.current{
@@ -34,19 +36,17 @@
 	}
 	.dots{
 		position: absolute;
-		bottom: 25px;
-		margin-left: -100px;
-		left: 50%;
+		bottom: 20px;
+		right: 25px;
 		height: 15px;
-		width: 200px;
 		text-align: center;
 		.current_dot{
 			background-color: $main_orange;
 		}
 	}
 	.dot{
-		width:15px;
-		height:15px;
+		width:10px;
+		height:10px;
 		background-color: #fff;
 		border-radius: 50%;
 		display:inline-block;

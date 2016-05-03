@@ -1,6 +1,5 @@
 @import "common.scss";
 @import "../ui/ui.scss";
-@import "sprites.scss";
 
 /***
  xueer header.scss
@@ -9,7 +8,9 @@
 
 .header {
     width: 100%;
+    height:80px;
     border-bottom: 1px solid $border_grey;
+    background: #FFFFFF;
 }
 
 .header {
@@ -21,24 +22,29 @@
         height:100%;
     }
     .container {
-        width: 960px;
+        width: 1000px;
         margin: 0 auto;
     }
     .head {
-        height:109px;
-        line-height: 109px;
+        height:80px;
+        line-height: 80px;
     }
     .head {
+        .rbt_logo{
+            width:40px;
+            height:40px;
+            border-radius: 50%;
+            margin-right:20px;
+        }
         .logo {
-            width: 126px;
-            height: 56px;
-            @include sprite($logo);
+            width: 95px;
+            height: 35px;
             margin-right: 47px;
         }
         .search {
             width: 391px;
             height: 40px;
-            margin-right: 60px;
+            margin-right: 40px;
         }
         .log_button {
             font-size: 18px;
@@ -47,7 +53,7 @@
             3px)
         }
         .login {
-            background-color: $main_orange;
+            background-color: $main_green;
             height:40px;
         }
     }
@@ -64,14 +70,13 @@
             line-height: 40px;
             height: 40px;
             width:80px;
-            background-color: #ec6941;
+            background-color: $font_red_deep;
             border-radius: 0px 3px 3px 0px;
             text-align: center;
         }
         .search_icon{
             width:26px;
             height:26px;
-            @include sprite($search);
         }
         .search_container{
             position: relative;
@@ -80,7 +85,7 @@
             height: 38px;
             width: 291px;
             border-radius: 3px 0px 0px 3px;
-            border: 1px solid #ec6941;
+            border: 1px solid $font_red_deep;
             border-right: none;
         }
         .pop_box{
@@ -120,16 +125,19 @@
         .item {
             height:36px;
             line-height:43px;
-            font-size: 18px;
-            color: $font_grey_light;
+            font-size: 20px;
             border-bottom: 2px solid #fff;
             margin-right: 46px;
         }
+        .first{
+            color: $font_red_deep;
+        }
         .last{
             margin-right: 73px;
+            color: $font_black_middle;
         }
         .item:hover {
-            color: $font_orange;
-            border-bottom: 2px solid $font_orange;
+            color: $font_blue_light;
+            border-bottom: 2px solid;
         }
 }

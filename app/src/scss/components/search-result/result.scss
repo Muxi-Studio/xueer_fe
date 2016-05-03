@@ -6,77 +6,77 @@
  authored by StephenLiu
 ***/
 
-
 .result{
-	width: 960px;	
-}
-.result{
-	.nav_under{
-		background-color:  $footer_bg;
-		height: 50px;
-		position: absolute;
-		left: 0;
+	width: 1000px;	
+	.head{
 		width: 100%;
-		margin-top: -30px;
+		line-height: 50px;
+		text-align: center;
+		margin-bottom: 8px;
+		background: $main_white;
+		.head_txt{
+			font-size: 18px;
+			color: $font_grey_light;
+			display: inline-block;
+			background: #FFFFFF;
+		}
 	}
 	.no-result{
 		margin-top: 40px;
 		width: 100%;
 	}
-	.head{
-		width: 100%;
-		border-bottom: 1px solid #eee;
-		margin-top: 30px;
-		padding-top:20px;
-	}
-	.head_txt{
-		font-size: 18px;
-		color: $font_grey_light;
-		border-left:10px solid $main_orange;
-		line-height: 60px;
-		height: 60px;
-		padding-left: 20px;
-	}
-	.list{
-		width: 100%;
-		line-height: 40px;
-		height: 40px;
-		margin-top: 12px;
-		font-size: 18px;
-		&:hover{
-			background-color: #d1c0a5;
+	.result_cont{
+		background: #FFFFFF;
+		padding: 0 50px 30px;
+		.course_cont {
+			padding: 20px 0;
+			border-bottom: 1px solid $border_grey;
 		}
-	}
-	.title{
-		width: 425px;
-		display: inline-block;
+		.course_intro{
+			margin-left: 20px;
+			padding-left: 20px;
+			vertical-align: top;
+		}
+		.course_class,
+		.course_message {
+			display: inline-block;
+		}
+		.line {
+			display: inline-block;
+			height: 22px;
+			margin: 0 10px 2px;
+			vertical-align: middle;
+			border-right: 2px solid $font_black_middle;
+		}
 	}
 	.list_title{
 		display: block;
+		width: 560px;
 		color: $font_grey_light;
+		font-size: 20px;
+		line-height: 20px;
 		&:hover{
 			color: $footer_bg;
 		}
-	}
-	.author{
-		width: 450px;
-		display: inline-block;
-		
-	}
-	.list_author{
-		color:  $font_grey_light;
-		&:hover{
-			color: $footer_bg;
+		.line {
+			border-color: $footer_bg; 
 		}
 	}
 	.like{
-		width: 70px;
+		width: 193px;
+		padding: 20px 0;
+		font-size: 18px;
 		display: inline-block;
-
+		.count {
+			color: $font_red_deep;
+		}
+		.like_text {
+			color: $font_black_deep;
+		}
+		.count,
+		.like_text {
+			padding: 5px 0 0 60px;
+			text-align: center;
+		}
 	}
-    .like_i{
-        width:20px;
-      	height:18px;
-    }
-    
 }

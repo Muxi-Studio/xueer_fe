@@ -1,14 +1,20 @@
 .pager{
-    &{
-        width: 960px;
-    	margin-top: 55px;
-    	border-top:1px solid #eee;
-    	line-height: 75px;
-    	height: 75px;
+        width: 100%;
     	text-align: right;
-    }
     .item{
+        line-height: 30px;
+        text-align: center;
     	margin-left:20px;
-    	color: $font_grey_light;
+        width: 30px;
+        height: 30px;
+    }
+    .hover_blue:hover{
+        color: $font_blue_light;
+    }
+    .check_bt{
+        display: inline-block;
+        width: 60px;
+        height: 30px;
+        background: $main_green;
     }	
 }

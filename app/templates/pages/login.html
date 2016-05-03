@@ -1,28 +1,22 @@
 {% extends "pages/base.html" %}
 {% block head %}
 	{{ super() }}
-	<link rel="stylesheet" type="text/css" href="static/css/login.css">
 {% endblock %}
 {% block title %}登录{% endblock %}
 {% block content %}
-<div class="content">
-	<div class="login">
-		<img src="static/images/background.png" alt="">
+<div class="login_content">
+	<div class="login margin_auto">
+		<svg>
+			<use xlink:href="#bg_people"/>
+		</svg>
 		<div class="content">
-			<div class="log_option">
-				<p><span class="third">第三方登录</span><span class="line"></span><span class="my">账号登录</span></p>
+			<div class="band">
+				<div class="band_t"></div>
+				<div class="band_b"></div>
 			</div>
-			<form class="third_part" action="#" method="post">
-					<input type="text" name="name" id="name" placeholder="" tabindex="1" />
-				<div class="weibo">
-					<img src="static/images/weibo1.png" alt="">
-					<p>微博登录</p>
-				</div>
-				<div class="qq">
-					<img src="static/images/qq.png" alt="">
-					<p>QQ登录</p>
-				</div>
-			</form>
+			<div class="log_option">
+				<p  class="tc"><span>登录</span></p>
+			</div>
 			<form class="our_part" action="#" method="post">
 				<input type="text" name="name" id="name" placeholder="输入账号" tabindex="1" />
 				<input type="text" name="name" id="name" placeholder="密码" tabindex="1" />
@@ -30,13 +24,18 @@
 				<div>
 					<input type="submit" value="登 录" />
 				</div>
-				<p class="bottom_line">没有账户？点击<a href="http://127.0.0.1:5000/registe">注册</a></p>
+				<p class="bottom_line">没有账户？<a href="http://127.0.0.1:5000/register">立即注册</a></p>
 			</form>
+			<svg class="folder">
+				<use xlink:href="#folder"/>
+			</svg>
+			<svg class="cactus">
+				<use xlink:href="#cactus"/>
+			</svg>
+			<div class="trg"></div>
 		</div>
-		
 	</div>
 </div>
-
 {% endblock %}
 
 

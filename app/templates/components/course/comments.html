@@ -1,42 +1,86 @@
-<div class="comments margin_auto">
-    <div class="head">
-        <span class="head_txt">热门评论</span>
-    </div>
-    {% for comment in hot_comments %}
-    <div class="comment space">
-        <div class="avatar">
-            <img src="{{ comment.avatar }}" alt="avatar">
+<div class="comments_box  margin_auto margin_b">
+    <div class="comments_cont">
+        <div class="head">
+            <span class="head_txt">热门评论</span>
         </div>
-        <div class="content">
-            <div class="top space">
-                <span class="username">
-					{{ comment.user_name }}
-				</span>
-                <span class="date">
-					{{ comment.date }}
-				</span>
+        {% for comment in hot_comments %}
+        <div class="comment space">
+            <div class="avatar">
+                <img src="{{ comment.avatar }}" alt="avatar">
             </div>
-            <div class="body">
-                {{ comment.body }}
+            <div class="content">
+                <div class="top space">
+                    <span class="username">
+                        {{ comment.user_name }}
+                        <span class="hot">hot</span>
+                    </span>
+                    <span class="date">
+                        {{ comment.date }}
+                    </span>
+                </div>
+                <div class="body">
+                    {{ comment.body }}
+                </div>
+                <div class="like">
+                    赞同（{{ comment.like }}）
+                </div>
             </div>
-            <div class="like">
-                赞同（{{ comment.like }}）
+        </div>
+        {% endfor %}
+    </div>
+    <div class="comments_cont">
+        <div class="head">
+            <span class="head_txt">最新评论</span>
+        </div>
+        {% for comment in hot_comments %}
+        <div class="comment space">
+            <div class="avatar">
+                <img src="{{ comment.avatar }}" alt="avatar">
+            </div>
+            <div class="content">
+                <div class="top space">
+                    <span class="username">
+                        {{ comment.user_name }}
+                    </span>
+                    <span class="date">
+                        {{ comment.date }}
+                    </span>
+                </div>
+                <div class="body">
+                    {{ comment.body }}
+                </div>
+                <div class="like">
+                    赞同（{{ comment.like }}）
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        {% block content %}
+                {% include 'components/search-result/nav-page.html' %}
+        {% endblock %}
+    </div>
+    <div class="comments_cont new border_b">
+        <div class="head">
+            <span class="head_txt">写评论</span>
+        </div>
+        <div class="new_comment_cont">
+            <div class="avatar">
+                <img src="">
+            </div>
+            <div class="comment_box">
+                <textarea class="new_comment" placeholder="确保你已经登录了再写评论哦(•̀ᴗ•́)و ̑̑"></textarea>
+                <input class="new_tags" placeholder="输入标签，用空格间隔"></input>
+                <div class="tag_head">热门标签，点击直接添加</div>
+                <div class="tags"> 
+                    <div class="pre_tag">哈</div>
+                    <div class="pre_tag">哈哈哈</div>
+                    <div class="pre_tag">哈哈哈哈</div>
+                    <div class="pre_tag">哈哈哈哈哈</div>
+                </div>
+                <button class="submit_bt margin_auto">提交</button>
             </div>
         </div>
     </div>
-    {% endfor %}
-    <div class="pager">
-    	<span class="item"><</span>
-    	<span class="item">上一页</span>
-    	<span class="item">1</span>
-    	<span class="item">2</span>
-    	<span class="item">3</span>
-    	<span class="item">4</span>
-    	<span class="item">下一页</span>
-    	<span class="item">></span>
-    </div>
-    <div class="head">
-        <span class="head_txt">写评论</span>
-    </div>
-    <div class="comment_box" id="comment_box">作业少 不点名 老师帅 哈哈哈</div>
+    <script src="/static/js/main.bundle.js"></script>
+    <script src="/static/js/comment.bundle.js"></script>
 </div>
