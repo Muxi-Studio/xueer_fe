@@ -1,6 +1,3 @@
-@import "../common/common.scss";
-@import "../../components/ui/ui.scss";
-
 /***
  xueer components/course/comments.scss
  authored by zindex
@@ -16,7 +13,6 @@
 	background: #FFFFFF;
 	padding: 42px 38px 60px 76px;
 	.head{
-		width:100%;
 		padding-bottom: 20px;
 	}
 	.head_txt{
@@ -27,20 +23,31 @@
 		padding-left: 11px;
 		line-height: 20px;
 	}
-	.avatar{
+	.pager{
+		margin-bottom: 40px;
+	}
+	.avatar {
 		display:inline-block;
 		width:59px;
 		height:59px;
 		border-radius: 50%;
 		overflow: hidden;
 		vertical-align: top;
-		img{
-			width:100%;
-		}
 	}
 	.comment{
 		margin-top:10px;
 		border-bottom: 1px solid #eeeeee;
+	}
+	.avatar{
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.top span{
+		display:inline-block;
+	}
+	.comment{
 		.content{
 			width: 600px;
 			display:inline-block;
@@ -51,9 +58,6 @@
 			padding-top: 11px;
 			padding-bottom: 14px;
 			color: $main_green;
-			span{
-				display:inline-block;
-			}
 		}
 		.username{
 			font-size: 18px;
@@ -69,7 +73,6 @@
 			color: $main_white;
 			line-height: 15px;
 			vertical-align: top;
-			text-align: center;
 		}
 		.date{
 			font-size: 14px;
@@ -89,14 +92,11 @@
 			margin-bottom: 20px;
 		}
 	}
-	.pager{
-		margin-bottom: 40px;
-	}
-	.new_comment_cont{
-		.avatar{
+	.new_comment_cont {
+		.avatar {
 			margin-right: 10px;
 		}
-		.new_comment{
+		.new_comment {
 			width: 608px;
 			height: 200px;
 			padding: 10px;
@@ -108,17 +108,13 @@
 			display: inline-block;
 		}
 		.submit_bt{
-			width: 100px;
-			height: 30px;
+			@include button(100px,30px,0)
 			display: block;
 			margin-top: 58px;
 			margin-bottom: 80px;
 			background: $main_green;
 			font-size: 14px;
 			font-weight: 400;
-			color: #FFFFFF;
-			line-height: 30px;
-			text-align: center;
 		}
 		.tag_head {
 			font-size: 14px;
@@ -132,13 +128,9 @@
 			line-height: 40px;
 			padding: 0 10px;
 			margin: 30px 0;
-			border: 2px solid $border_grey;
 		}
 		.pre_tag{
-			display: inline-block;
-			margin-right: 10px;
-			padding: 5px 12px;
-			font-size: 14px;
+			@include tag(14px);
 			font-weight: lighter;
 			color: #FFFFFF;
 			background: #CDCDCD;

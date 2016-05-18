@@ -3,7 +3,7 @@
 	{% else %}
 		<!-- 无搜索结果的处理 -->
 	{% endif %}
-	<div class="head">
+	<div class="head tc">
 		<span class="head_txt">
 			{% if courses %}
 			共计12306个搜索结果
@@ -14,17 +14,17 @@
 	</div>
 	<div class="result_cont margin_b border_b">
 		{% for lists in result %}
-		<div div class="course_cont">
+		<div div class="course_cont space">
 			<div class="course_class">
                 公 
             </div>
             <div class="course_intro">
 				<a href="#" class="list_title">{{ lists.author }}<span class="line"></span>《{{ lists.tittle }}》</a>
-				<div class="course_mesg">{{ lists.messgae }}</div>
+				<div>{{ lists.messgae }}</div>
 			</div>	
 			<div class="like">
-				<div class="count">{{ lists.likes }}人</div>
-				<div class="like_text">喜欢</div>
+				<div class="count tc">{{ lists.likes }}人</div>
+				<div class="like_text tc">喜欢</div>
 			</div>
 		</div>
 		{% endfor %}

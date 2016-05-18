@@ -1,6 +1,3 @@
-@import "../ui/ui.scss";
-@import "../common/common.scss";
-
 /***
  xueer component index_guess
  authored by StephenLiu
@@ -9,21 +6,40 @@
 .result{
 	width: 1000px;	
 	.head{
-		width: 100%;
 		line-height: 50px;
-		text-align: center;
 		margin-bottom: 8px;
 		background: $main_white;
-		.head_txt{
-			font-size: 18px;
-			color: $font_grey_light;
-			display: inline-block;
-			background: #FFFFFF;
-		}
+	}
+	.head_txt{
+		font-size: 18px;
+		color: $font_grey_light;
+		background: #FFFFFF;
 	}
 	.no-result{
 		margin-top: 40px;
-		width: 100%;
+	}
+	.list_title {
+		display: block;
+		width: 560px;
+		color: $font_grey_light;
+		font-size: 20px;
+		line-height: 20px;
+	}
+	.like{
+		width: 193px;
+		padding: 20px 0;
+		font-size: 18px;
+		display: inline-block;
+	}
+	.count {
+		color: $font_red_deep;
+	}
+	.like_text {
+		color: $font_black_deep;
+	}
+	.count,
+	.like_text {
+		padding: 5px 0 0 60px;
 	}
 	.result_cont{
 		background: #FFFFFF;
@@ -37,46 +53,24 @@
 			padding-left: 20px;
 			vertical-align: top;
 		}
+		.course_class {
+			@include course_class(80px,80px,36px);
+		}
 		.course_class,
 		.course_message {
 			display: inline-block;
 		}
 		.line {
-			display: inline-block;
-			height: 22px;
 			margin: 0 10px 2px;
-			vertical-align: middle;
 			border-right: 2px solid $font_black_middle;
 		}
 	}
 	.list_title{
-		display: block;
-		width: 560px;
-		color: $font_grey_light;
-		font-size: 20px;
-		line-height: 20px;
 		&:hover{
 			color: $footer_bg;
 		}
 		.line {
 			border-color: $footer_bg; 
-		}
-	}
-	.like{
-		width: 193px;
-		padding: 20px 0;
-		font-size: 18px;
-		display: inline-block;
-		.count {
-			color: $font_red_deep;
-		}
-		.like_text {
-			color: $font_black_deep;
-		}
-		.count,
-		.like_text {
-			padding: 5px 0 0 60px;
-			text-align: center;
 		}
 	}
 }

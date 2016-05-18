@@ -2,12 +2,25 @@
 	width: $width;
 	line-height: $height;
 	border-radius: $radius;
+	color: #fff;
 	text-align: center;
 }
-@mixin tag(){
-	line-height: 22px;
-	height:21px;
+@mixin tag($font-size){
+	font-size: $font-size;
+	padding: 3px 14px;
 	display:inline-block;
-	border:2px solid $main_white;
 	text-align: center;
+	transition:all;
+}
+@mixin course_class($width,$height,$size){
+	width: $width;
+    height: $height;
+    color: #1dc091;
+    border: 2px solid;
+    border-radius: 50%;
+    line-height:$height; 
+    font-size: $size;
+    font-weight: 300;
+    text-align: center;
+    vertical-align: top;
 }

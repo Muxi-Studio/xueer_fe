@@ -2,8 +2,6 @@
 	width: 1000px;
 	position: relative;
 	background: #FFFFFF;
-	border-bottom: 2px solid $border_grey;
-	margin-bottom: 77px;
 	.not_found_bg {
 		width: 854px;
 		height: 305px;
@@ -13,10 +11,6 @@
 		height: 270px;
 		padding-top: 80px;
 		box-sizing: border-box;
-		.result,
-		.time {
-			text-align: center;
-		}
 		.result {
 			font-size: 24px;
 			margin-bottom: 20px;
@@ -32,3 +26,4 @@
 		}
 	}
 }
+

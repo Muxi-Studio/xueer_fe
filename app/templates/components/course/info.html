@@ -1,7 +1,7 @@
 <div class="info margin_auto">
-    <div class="info_box">
-        <div class="course border_bottom">
-            <div class="course_info">
+    <div class="space">
+        <div class="course">
+            <div class="course_info space">
                 <div class="course_class">
                    公 
                 </div>
@@ -15,21 +15,21 @@
                     </div>
                 </div>
             </div>
-            <div class="tags space">
+            <div class="tags tc space">
             {% for tag in info.tags %}
-                <div class="tag">
+                <div class="tag cp">
                     {{ tag }}
                 </div>
             {% endfor %}
             </div>
         </div>
-        <div class="like border_bottom">
-            <div class="count space">
-                <span class="count_text margin_b">这门课被</span>
+        <div class="like">
+            <div class="count tc space">
+                <span class="count_text va_item margin_b">这门课被</span>
                 <span class="num va_item margin_b">{{ info.like }}</span>
                 <span class="count_text margin_b">人所喜欢</span>
             </div>
-            <div class="like_bt cp">
+            <div class="like_bt tc cp">
                 +1
             </div>
         </div>

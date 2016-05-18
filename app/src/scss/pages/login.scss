@@ -4,76 +4,6 @@ login.scss
 .login_content{
 	width: 100%;
 	background: $bg_grey_color;
-	.login {
-	    width: 1000px;
-	    height: 780px;
-	    position: relative;
-	    line-height: 26px;
-	    .content{
-			padding: 30px 50px;
-			height: 426px;
-			width: 340px;
-			background: #fff;
-			position: absolute;
-			right: 140px;
-			bottom: 230px;
-			box-sizing:border-box;
-			box-shadow: 5px 1px 0px #CDCDCD;
-		}
-		.band {
-			width: 48px;
-			height: 70px;
-			position: absolute;
-			top: -35px;
-			left: 146px;
-			.band_t,
-			.band_b {
-				height: 50%;
-				background: $border_grey;
-			}
-			.band_b {
-				opacity: .3;
-			}
-		}
-		.folder{
-			width: 92px;
-			height: 60px;
-			position: absolute;
-			bottom: -3px;
-			right: -4px;
-		}
-		.cactus{
-			width: 85px;
-			height: 135px;
-			position: absolute;
-			bottom: -83px;
-			left: -10px;
-		}
-		.trg{
-			width: 94px;
-			height: 52px;
-			box-sizing: border-box;
-			border-bottom: 26px solid #F5EA5C;
-			border-top: 26px solid transparent;
-			border-left: 47px solid transparent;
-			border-right: 47px solid #F5EA5C;
-			position: absolute;
-			bottom: -1px;
-			right: -5px;
-		}
-		.log_option{
-			margin-top: 40px;
-			p{
-				color: #5c5c5c;
-				font-size: 22px;
-			}
-			p span{
-				display: inline-block;
-				border-bottom: solid 2px #fff;
-
-			}
-		}
-	}
 	form{
 		position: absolute;
 		top: 100px;
@@ -88,12 +18,6 @@ login.scss
 			margin: 10px 0;
 			border: 1px solid #999;
 		}
-		.forget{
-			line-height: 20px;
-			text-align: right;
-			color: $font_red_deep;
-			margin-right: 35px;
-		}
 		input[type=submit] {
 			background: $font_red_deep;
 			color: #fff;
@@ -101,6 +25,70 @@ login.scss
 			border: 0;
 			cursor: pointer;
 		}
+		.forget{
+			line-height: 20px;
+			text-align: right;
+			color: $font_red_deep;
+			margin-right: 35px;
+		}
+	}
+	.login {
+	    width: 1000px;
+	    height: 780px;
+	    position: relative;
+	    line-height: 26px;
+	}
+	.content{
+		padding: 30px 50px;
+		height: 426px;
+		width: 340px;
+		background: #fff;
+		position: absolute;
+		right: 140px;
+		bottom: 230px;
+		box-sizing:border-box;
+		box-shadow: 5px 1px 0px #CDCDCD;
+	}
+	.band {
+		width: 48px;
+		height: 70px;
+		position: absolute;
+		top: -35px;
+		left: 146px;
+	}
+	.band_t,
+	.band_b {
+		height: 50%;
+		background: $border_grey;
+	}
+	.band_b {
+		opacity: .3;
+	}
+	.folder{
+		width: 92px;
+		height: 60px;
+		position: absolute;
+		bottom: -3px;
+		right: -4px;
+	}
+	.cactus{
+		width: 85px;
+		height: 135px;
+		position: absolute;
+		bottom: -83px;
+		left: -10px;
+	}
+	.trg{
+		width: 94px;
+		height: 52px;
+		box-sizing: border-box;
+		border-bottom: 26px solid #F5EA5C;
+		border-top: 26px solid transparent;
+		border-left: 47px solid transparent;
+		border-right: 47px solid #F5EA5C;
+		position: absolute;
+		bottom: -1px;
+		right: -5px;
 	}
 	p.bottom_line{
 		text-align: center;
@@ -119,5 +107,17 @@ login.scss
 		height:676px;
 	    position: absolute;
 	    bottom: -73px;
+	}
+	.log_option{
+		margin-top: 40px;
+		p{
+			color: #5c5c5c;
+			font-size: 22px;
+		}
+		p span{
+			display: inline-block;
+			border-bottom: solid 2px #fff;
+
+		}
 	}
 }

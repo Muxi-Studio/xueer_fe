@@ -3,7 +3,6 @@
 }
 .space{
 	font-size: 0rem;
-    -webkit-text-size-adjust:none;
 }
 .va_item{  
 	display: inline-block;
@@ -20,16 +19,4 @@
 }
 .margin_b {
     margin-bottom: 78px;
-}
-.course_class {
-    width: 96px;
-    height: 96px;
-    border:2px solid $main_green;
-    border-radius: 49px;
-    line-height: 100px;
-    text-align: center;
-    font-size: 36px;
-    font-weight: 300;
-    color: $main_green;
-    vertical-align: top;
 }

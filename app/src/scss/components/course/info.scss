@@ -1,24 +1,22 @@
-@import "../common/common.scss";
-@import "../ui/ui.scss";
-
 /***
  xueer components/course/info.scss
  authored by zindex
 ***/
-
 .info {
     width: 1000px;
 }
 .course_info {
     width: 678px;
-    .course_class {
-        display:inline-block;
-    }
 }
+
 .course_intro{
     display: inline-block;
     ul {
         margin: 0;
+    }
+    li{
+        font-weight: 400;
+        line-height: 30px;
     }
     .disc{
         display: inline-block;
@@ -27,11 +25,6 @@
         margin: 0 10px;
         border: 4px solid $font_red_deep;
         border-radius: 4px;
-    }
-    li{
-        list-style: none;
-        font-weight: 400;
-        line-height: 30px;
     }
     .course_name {
         font-size: 18px;
@@ -49,6 +42,10 @@
     }
 }
 .info {
+    .course_class {
+        @include course_class(96px,96px,36px);
+        display: inline-block;
+    }
     .course {
         background: #FFFFFF;
         padding: 40px 30px 40px 90px;
@@ -57,74 +54,73 @@
         box-sizing: border-box;
         margin-right:10px;
     }
-    .tags {
-        color: #FFFFFF;
-        margin-top: 26px;
-        padding-left: 160px;
-        text-align: center;
-        font-weight: lighter;
-        .tag {
-            background: $main_orange;
-        }
-    }
     .like {
         width: 185px;
         display:inline-block;
         vertical-align: top;
         background: #FFFFFF;
-        .like_bt {
-            padding: 20px 76px 26px 78px;
-            background: $font_red_deep;
-            font-size: 36px;
-            color: #FFFFFF;
-        }
-        .like_bt:hover{
-            color: $font_blue_light;
-        }
-        .count {
-            text-align: center;
-            color: $font_grey_light;
-            padding: 38px 40px 22px 40px;
-        }
-        .num {
-            font-size: 24px;
-            color: $main_orange;
-        }
-        .count_text {
-            font-size: 18px;
-            font-weight: lighter;
-            display: inline-block;
-            vertical-align: middle;
-        }
-        .comment_btn {
-            border-right-width: 2px;
-        }
-        .btn_text {
-        	height:100%;
-            font-size: 20px;
-            margin-left: 12px;
-            
-        }
-        .margin_b{
-            margin-bottom: 10px;
-        }
-        .like_i{
-        	width:20px;
-        	height:18px;
-        }
-        .comment_i{
-        	width:24px;
-        	height:19px;
-        }
     }
-    .like_btn{
-    	.btn_text{
-    		line-height: 61px;
-    	}
+    .tags {
+        color: #FFFFFF;
+        margin-top: 26px;
+        padding-left: 160px;
+        font-weight: lighter;
     }
-    .comment_btn{
-    	.btn_text{
-    		line-height: 63px;
-    	}
+    .tag {
+        @include tag(18px);
+        margin-right: 20px;
+        border:2px solid $main_white;
+        background: $main_orange;
+    }
+    .like_bt {
+        padding: 20px 76px 26px 78px;
+        background: $font_red_deep;
+        font-size: 36px;
+        color: #FFFFFF;
+    }
+    .count {
+        color: $font_grey_light;
+        padding: 38px 40px 22px 40px;
+    }
+    .num {
+        font-size: 24px;
+        color: $main_orange;
+    }
+    .count_text {
+        font-size: 18px;
+        font-weight: lighter;
+    }
+    .comment_btn {
+        border-right-width: 2px;
+    }
+    .btn_text {
+    	height:100%;
+        font-size: 20px;
+        margin-left: 12px;    
+    }
+    .margin_b{
+        margin-bottom: 10px;
+    }
+    .like_i{
+    	width:20px;
+    	height:18px;
+        }
+    .comment_i{
+    	width:24px;
+    	height:19px;
+    }
+    .btn_text{
+        line-height: 61px;
+    }
+    .btn_text{
+        line-height: 63px;
+    }
+    .tag:hover {
+        background-color: $main_orange;
+        border: 2px solid $font_blue_light;
+        color: #fff; 
+    }
+    .like_bt:hover{
+        color: $font_blue_light;
     }
 }

@@ -3,12 +3,21 @@
 	background: $main_white; 
 	padding-bottom: 330px;
 	margin-bottom: 90px;
+	.tags {
+		width:243px;
+		display: inline-block;
+		margin-bottom: 20px;
+	}
+	.tag_item {
+		@include tag(18px);
+		line-height: 24px;
+		font-weight: lighter;
+		color: $main_white; 
+		background: $main_green
+	}
 	.class_tags {
 		width: 356px;
 		height: 60px;
-		.class_tag:last-child {
-			margin: 0;
-		}
 	}
 	.classes_tags {
 		width: 730px;
@@ -21,18 +30,7 @@
 			border-left: 5px solid $font_red_deep;
 		}
 	}
-	.tags {
-		width:240px;
-		text-align: center;
-		display: inline-block;
-		margin-bottom: 10px;
-	}
-	.tag_item {
-		display: inline-block;
-		padding: 6px 14px;
-		font-size: 18px;
-		font-weight: lighter;
-		color: $main_white; 
-		background: $main_green
+	.class_tag:last-child {
+		margin: 0;
 	}
 }

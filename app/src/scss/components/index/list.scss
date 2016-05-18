@@ -1,6 +1,3 @@
-@import "../ui/ui.scss";
-@import "../common/common.scss";
-
 /***
  xueer component index_list
  authored by zindex
@@ -9,72 +6,78 @@
 .hot_courses{
 	width: 1000px;
 	box-sizing: border-box;
-	padding: 40px 50px;
+	padding: 40px 80px 40px 100px;
 	margin-bottom: 10px;
 	background: #FFFFFF;
-	.lists{
-		width:220px;
-		display: inline-block;
-		vertical-align: top;
-		.more {
-			width: 24px;
-			height: 24px;
-			font-size: 21px;
-			line-height:24px;
-			text-align: center;
-			margin-top: 32px;
-			color: $main_green;
-			border: 2px solid $main_green;
-			border-radius: 13px;
-		}
-		.list{
-			font-size: 24px;
-		}
-		a{
-			color:$font_grey_light;
-		}
-	}
 	.ib{
-		display:inline-block;
 		vertical-align: top;
 		margin-top: 40px;
 	}
-	.list{
-		padding-top: 5px;
-		border-right: 2px solid $border_grey;
-		.item{
-			width: 178px;
-			padding-right: 20px;
-			margin-bottom: 37px;
-		}
-		.item:last-child {
-			margin-bottom: 0;
-		}
-		.list_tag{
-			display: inline-block;
-			border: 3px solid $font_black_deep;
-			border-radius: 3px;
-			margin-right: 5px;
-		}
-		.course_name{
-			font-size: 14px;
-			margin-bottom: 10px;
-			overflow:hidden;
-			white-space:nowrap;
-			text-overflow:ellipsis;
-		}
-		.info{
-			width: 100%;
-			font-size: 18px;
+	.item{
+		width: 158px;
+		padding-right: 20px;
+		margin-bottom: 37px;
+	}
+	.list_tag{
+		display: inline-block;
+		border: 3px solid $font_black_deep;
+		border-radius: 3px;
+		margin-right: 5px;
+	}
+	.course_name{
+		font-size: 14px;
+		margin-bottom: 10px;
+		overflow:hidden;
+		white-space:nowrap;
+		text-overflow:ellipsis;
+	}
+	.info{
+		font-size: 18px;
+		color:$font_grey_light;
+		width: 100%;
+	}
+	.teacher{
+		font-size: 12px;
+		margin-left: 10px;
+	}
+	.lists {
+		margin-right: 40px;
+		display: inline-block;
+		vertical-align: top;
+	}
+	.lists{
+		a{
 			color:$font_grey_light;
-			margin-bottom: 33px;
-			.teacher{
-				font-size: 12px;
-				margin-left: 10px;
-			}
 		}
-		.info:last-child {
-			margin-bottom: 0px;
+		.more {
+			@include course_class(24px,24px,21px);
+			margin-top: 32px;
+		}
+		.course_class {
+			@include course_class(96px,96px,36px);
+		}
+		.list{
+			font-size: 24px;
+			padding-top: 5px;
+			border-right: 2px solid $border_grey;
+		}
+	}
+	.item:last-child {
+		margin-bottom: 0;
+	}
+	.info:last-child {
+		margin-bottom: 0px;
+	}
+	.lists:last-child {
+		margin-right: 0;
+		.item {
+			padding-right: 0;
+		}
+		.list {
+			border-right: 0;
+		}
+		.course_class {
+			margin-left: 40px;
 		}
 	}
 }

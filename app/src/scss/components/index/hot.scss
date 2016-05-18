@@ -6,37 +6,34 @@
 	.head {
 		width: 230px;
 		height: 42px;
-		text-align: center;
 		margin-bottom: 20px;
-		.title {
-			font-size: 18px;
-			line-height: 18px;
-			margin-bottom: 5px;
-			color: $font_black_deep;
-		}
-		.introduce {
-			font-size: 12px;
-			line-height: 12px;
-			color: $main_green;
-		}
 	}
-	.hot_box {
-		display: inline-block;
+	.title {
+		font-size: 18px;
+		line-height: 18px;
+		margin-bottom: 5px;
+		color: $font_black_deep;
+	}
+	.introduce {
+		font-size: 12px;
+		line-height: 12px;
+		color: $main_green;
 	}
 	.hot_cont {
-		float: left;
+		display: inline-block;
+		vertical-align: top;
 		margin-left: -2px;
 		.course_about,
 		.course_index {
 			width: 140px;
 			height: 103px;
+			line-height: 103px; 
+		}
+		.center_cont {
+			font-size: 14px;
 			line-height: 18px;
-			text-align: center; 
-			vertical-align: middle;
 		}
 		.course_about {
-			display: table-cell;
-			font-size: 14px;
 			border: 2px solid $main_green;
 		}
 		.course_index {

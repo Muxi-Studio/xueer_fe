@@ -1,24 +1,28 @@
 <div class="hot_course margin_auto">
-	<div class="head margin_auto">
+	<div class="head tc margin_auto">
 		<div class="title">最热课程动态</div>
 		<div class="introduce">精心为您推荐最佳口碑课程NO.1-No.5</div>
 	</div>
-	<div class="hot_box">
+	<div class="space">
 	{% for course in hot_five %}
 		{%- if loop.index is odd %}
 		<div class="hot_cont">
-			<div class="course_about cp">
-				<div>{{ course.teacher}}</div>
-				<div>《{{ course.title}}》</div>
+			<div class="course_about tc cp">
+				<div class="center_cont va_item">
+					<div>{{ course.teacher}}</div>
+					<div>《{{ course.title}}》</div>
+				</div>
 			</div>
-			<div class="course_index">0{{ loop.index }}</div>
+			<div class="course_index tc">0{{ loop.index }}</div>
 		</div>
 		{%- else %}
 		<div class="hot_cont">
 			<div class="course_index">0{{ loop.index }}</div>
-			<div class="course_about cp">
-				<div>{{ course.teacher}}</div>
-				<div>《{{ course.title}}》</div>
+			<div class="course_about tc cp">
+				<div class="center_cont va_item">
+					<div>{{ course.teacher}}</div>
+					<div>《{{ course.title}}》</div>
+				</div>
 			</div>
 		</div>
 		{% endif %}

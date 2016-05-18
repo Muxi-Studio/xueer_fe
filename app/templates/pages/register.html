@@ -4,18 +4,18 @@
 {% endblock %}
 {% block title %}登录{% endblock %}
 {% block content %}
-<div class="registe_box margin_auto">
-	<div class="re_or_log">
+<div class="registe_box margin_b margin_auto">
+	<div class="space">
 		<span class="register">注册</span>
 		<div class="login">已有账户？<a href="http://127.0.0.1:5000/login">返回登录</a></div>
 	</div>
 	<form action="***" method="get">
 		<div class="must margin_auto">
-			<div class="e-mail input_warpper">
+			<div class="input_warpper">
 				<input class="input" type="text" id="user_email" name="e-mail" placeholder="登录邮箱" />
 				<div class="hint">邮箱是您登录的唯一账号，请谨慎填写</div>
 			</div>
-			<div class="name input_warpper">
+			<div class="input_warpper">
 				<input class="input" type="text" id="user_name" name="name" placeholder="用户名（3-12字符，包括字母/数字/下划线）" />
 				<div class="hint">请输入3-12个字符的用户名（包括字母/数字/下划线）</div>
 			</div>
@@ -28,7 +28,7 @@
 				<div class="hint">请再次输入密码</div>
 			</div>
 		</div>
-		<input class="submit margin_auto" id="submit" type="submit" value="马上注册" />
+		<input class="submit cp margin_auto" id="submit" type="submit" value="马上注册" />
 	</form>
 </div>
 <script src="/static/js/register.bundle.js"></script>

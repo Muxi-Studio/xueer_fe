@@ -1,143 +1,104 @@
-@import "common.scss";
-@import "../ui/ui.scss";
-
 /***
  xueer header.scss
  authored by zindex
 ***/
 
 .header {
-    width: 100%;
     height:80px;
     border-bottom: 1px solid $border_grey;
     background: #FFFFFF;
 }
-
+.nav:after{
+    content: "";
+    display:inline-block;
+    vertical-align: middle;
+    width:0;
+    height:100%;
+}
 .header {
-    .nav:after{
-        content: "";
-        display:inline-block;
-        vertical-align: middle;
-        width:0;
-        height:100%;
-    }
     .container {
         width: 1000px;
-        margin: 0 auto;
     }
     .head {
         height:80px;
         line-height: 80px;
     }
-    .head {
-        .rbt_logo{
-            width:40px;
-            height:40px;
-            border-radius: 50%;
-            margin-right:20px;
-        }
-        .logo {
-            width: 95px;
-            height: 35px;
-            margin-right: 47px;
-        }
-        .search {
-            width: 391px;
-            height: 40px;
-            margin-right: 40px;
-        }
-        .log_button {
-            font-size: 18px;
-            @include button(102px,
-            40px,
-            3px)
-        }
-        .login {
-            background-color: $main_green;
-            height:40px;
-        }
+    .nav {
+        height:100%;
+    }
+    .rbt_logo{
+        width:40px;
+        height:40px;
+        border-radius: 50%;
+        margin-right:20px;
+    }
+    .logo {
+        width: 95px;
+        height: 35px;
+        margin-right: 47px;
     }
     .search {
-        .form {
-            width: 100%;
-            line-height: 40px;
-        }
-        .input{
-            font-size: 18px;
-            padding-left: 12px;
-        }
-        .search_button {
-            line-height: 40px;
-            height: 40px;
-            width:80px;
-            background-color: $font_red_deep;
-            border-radius: 0px 3px 3px 0px;
-            text-align: center;
-        }
-        .search_icon{
-            width:26px;
-            height:26px;
-        }
-        .search_container{
-            position: relative;
-        }
-        .input_warpper{
-            height: 38px;
-            width: 291px;
-            border-radius: 3px 0px 0px 3px;
-            border: 1px solid $font_red_deep;
-            border-right: none;
-        }
-        .pop_box{
-            width:100%;
-            height:auto;
-            box-sizing:border-box;
-            border:1px solid $font_grey_light;
-            position:absolute;
-            top: 39px;
-            left:0px;
-            z-index: 2;
-            background-color: #fff;
-        }
-        .hot_tags{
-            padding:22px 12px 32px;
-            color:$font_grey_light;
-        }
-        .tag_title{
-            font-size: 12px;
-        }
-        .pop_list a.item{
-            display:block;
-            font-size: 14px;
-            line-height: 25px;
-            padding:0px 12px;
-        }
-        .pop_list a.item:hover{
-            background-color: $font_grey_deep;
-        }
-        .pop_list a,.tag_title a{
-            color:$font_grey_light;
-        }
+        width: 391px;
+        height: 40px;
+        margin-right: 40px;
+    }
+    .log_button {
+        font-size: 18px;
+        @include button(102px,
+        40px,
+        3px)
+    }
+    .login {
+        background-color: $main_green;
+    }
+}
+.search {
+    .form {
+        line-height: 40px;
+    }
+    .input{
+        font-size: 18px;
+        padding-left: 12px;
+    }
+    .search_button {
+        line-height: 40px;
+        height: 40px;
+        width:80px;
+        background-color: $font_red_deep;
+        border-radius: 0px 3px 3px 0px;
+    }
+    .search_icon{
+        width:26px;
+        height:26px;
+    }
+    .search_container{
+        position: relative;
+    }
+    .input_warpper{
+        height: 38px;
+        width: 291px;
+        border-radius: 3px 0px 0px 3px;
+        border: 1px solid $font_red_deep;
+        border-right: none;
     }
 }
 .nav {
-    height:100%;
-        .item {
-            height:36px;
-            line-height:43px;
-            font-size: 20px;
-            border-bottom: 2px solid #fff;
-            margin-right: 46px;
-        }
-        .first{
-            color: $font_red_deep;
-        }
-        .last{
-            margin-right: 73px;
-            color: $font_black_middle;
-        }
-        .item:hover {
-            color: $font_blue_light;
-            border-bottom: 2px solid;
-        }
+    .item {
+        height:36px;
+        line-height:43px;
+        font-size: 20px;
+        border-bottom: 2px solid #fff;
+        margin-right: 46px;
+    }
+    .first{
+        color: $font_red_deep;
+    }
+    .last{
+        margin-right: 73px;
+        color: $font_black_middle;
+    }
+    .item:hover {
+        color: $font_blue_light;
+        border-bottom: 2px solid;
+    }
 }
