@@ -47,7 +47,7 @@
         display: inline-block;
     }
     .course {
-        background: #FFFFFF;
+        background: $main_white;
         padding: 40px 30px 40px 90px;
         display:inline-block;
         width: 800px;
@@ -56,12 +56,10 @@
     }
     .like {
         width: 185px;
-        display:inline-block;
-        vertical-align: top;
-        background: #FFFFFF;
+        background: $main_white;
     }
     .tags {
-        color: #FFFFFF;
+        color: $main_white;
         margin-top: 26px;
         padding-left: 160px;
         font-weight: lighter;
@@ -76,7 +74,7 @@
         padding: 20px 76px 26px 78px;
         background: $font_red_deep;
         font-size: 36px;
-        color: #FFFFFF;
+        color: $main_white;
     }
     .count {
         color: $font_grey_light;
@@ -118,7 +116,7 @@
     .tag:hover {
         background-color: $main_orange;
         border: 2px solid $font_blue_light;
-        color: #fff; 
+        color: $main_white; 
     }
     .like_bt:hover{
         color: $font_blue_light;

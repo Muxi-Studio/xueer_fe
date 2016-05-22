@@ -1,6 +1,6 @@
 .hot_course {
 	width: 1000px;
-	background: #FFFFFF;
+	background: $main_white;
 	box-sizing: border-box;
 	padding: 30px 145px;
 	.head {
@@ -20,8 +20,6 @@
 		color: $main_green;
 	}
 	.hot_cont {
-		display: inline-block;
-		vertical-align: top;
 		margin-left: -2px;
 		.course_about,
 		.course_index {
@@ -48,7 +46,7 @@
 	}
 	.hot_cont:nth-child(3) {
 		.course_about {
-			color: #FFFFFF;
+			color: $main_white;
 			background: $main_green;
 		}
 	}

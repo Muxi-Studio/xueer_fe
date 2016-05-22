@@ -2,7 +2,7 @@
 	width: $width;
 	line-height: $height;
 	border-radius: $radius;
-	color: #fff;
+	color: $main_white;
 	text-align: center;
 }
 @mixin tag($font-size){
@@ -15,7 +15,7 @@
 @mixin course_class($width,$height,$size){
 	width: $width;
     height: $height;
-    color: #1dc091;
+    color: $main_green;
     border: 2px solid;
     border-radius: 50%;
     line-height:$height; 

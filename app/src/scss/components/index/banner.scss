@@ -44,10 +44,8 @@
 	.dot{
 		width:10px;
 		height:10px;
-		background-color: #fff;
+		background-color: $main_white;
 		border-radius: 50%;
-		display:inline-block;
-		vertical-align: top;
 		cursor: pointer;
 		margin: 5px;
 	}

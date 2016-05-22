@@ -8,7 +8,7 @@
 	box-sizing: border-box;
 	padding: 40px 80px 40px 100px;
 	margin-bottom: 10px;
-	background: #FFFFFF;
+	background: $main_white;
 	.ib{
 		vertical-align: top;
 		margin-top: 40px;
@@ -42,8 +42,6 @@
 	}
 	.lists {
 		margin-right: 40px;
-		display: inline-block;
-		vertical-align: top;
 	}
 	.lists{
 		a{

@@ -13,7 +13,7 @@
 	.head_txt{
 		font-size: 18px;
 		color: $font_grey_light;
-		background: #FFFFFF;
+		background: $main_white;
 	}
 	.no-result{
 		margin-top: 40px;
@@ -42,7 +42,7 @@
 		padding: 5px 0 0 60px;
 	}
 	.result_cont{
-		background: #FFFFFF;
+		background: $main_white;
 		padding: 0 50px 30px;
 		.course_cont {
 			padding: 20px 0;

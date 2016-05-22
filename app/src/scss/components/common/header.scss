@@ -6,7 +6,7 @@
 .header {
     height:80px;
     border-bottom: 1px solid $border_grey;
-    background: #FFFFFF;
+    background: $main_white;
 }
 .nav:after{
     content: "";
@@ -76,7 +76,9 @@
     }
     .input_warpper{
         height: 38px;
-        width: 291px;
+        padding: 0 10px;
+        width: 270px;
+        font-size: 14px;
         border-radius: 3px 0px 0px 3px;
         border: 1px solid $font_red_deep;
         border-right: none;
@@ -87,7 +89,7 @@
         height:36px;
         line-height:43px;
         font-size: 20px;
-        border-bottom: 2px solid #fff;
+        border-bottom: 2px solid $main_white;
         margin-right: 46px;
     }
     .first{

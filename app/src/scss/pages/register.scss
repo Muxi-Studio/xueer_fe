@@ -5,7 +5,7 @@ register.scss
     width: 1000px;
     box-sizing: border-box;
     padding: 70px 80px 410px;
-    background: #FFFFFF;
+    background: $main_white;
     form {
         padding-top: 40px;
         font-size: 24px;
@@ -36,7 +36,7 @@ register.scss
         width: 50%;
         display: inline-block;
         text-align: right;
-        color: #4098d1;
+        color: $font_blue_middle;
         font-size: 12px;
         a {
             font-size: 18px;
@@ -46,13 +46,13 @@ register.scss
     .must {
         width: 450px;
         span{
-            color: #1dc091;
+            color: $main_green;
         }
         input {
             width: 100%;
             height: 50px;
             box-sizing: border-box;
-            color: #999;
+            color: $font_black_middle;
             font-size: 16px;
             border: solid 1px;
             padding: 0px 10px;

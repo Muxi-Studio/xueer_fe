@@ -10,17 +10,17 @@ login.scss
 		input{
 			height: 40px;
 			width: 240px;
-			color: #aaa;
+			color: $font_black_middle;
 			line-height: 40px;
 			padding: 0px 15px;
 			box-sizing:border-box;
 			font-size: 20px;
 			margin: 10px 0;
-			border: 1px solid #999;
+			border: 1px solid $font_black_middle;
 		}
 		input[type=submit] {
 			background: $font_red_deep;
-			color: #fff;
+			color: $main_white;
 			margin-top: 25px;
 			border: 0;
 			cursor: pointer;
@@ -42,7 +42,7 @@ login.scss
 		padding: 30px 50px;
 		height: 426px;
 		width: 340px;
-		background: #fff;
+		background: $main_white;
 		position: absolute;
 		right: 140px;
 		bottom: 230px;
@@ -82,17 +82,17 @@ login.scss
 		width: 94px;
 		height: 52px;
 		box-sizing: border-box;
-		border-bottom: 26px solid #F5EA5C;
+		border-bottom: 26px solid $bg_yellow_light;
 		border-top: 26px solid transparent;
 		border-left: 47px solid transparent;
-		border-right: 47px solid #F5EA5C;
+		border-right: 47px solid $bg_yellow_light;
 		position: absolute;
 		bottom: -1px;
 		right: -5px;
 	}
 	p.bottom_line{
 		text-align: center;
-		color: #4098d1;
+		color: $font_blue_middle;
 		font-size: 12px;
 		font-weight: light;
 		margin: 40px 42px 10px 0px;
@@ -111,12 +111,12 @@ login.scss
 	.log_option{
 		margin-top: 40px;
 		p{
-			color: #5c5c5c;
+			color: $font_grey_light;
 			font-size: 22px;
 		}
 		p span{
 			display: inline-block;
-			border-bottom: solid 2px #fff;
+			border-bottom: solid 2px $main_white;
 
 		}
 	}

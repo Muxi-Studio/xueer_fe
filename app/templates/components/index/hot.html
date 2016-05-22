@@ -6,7 +6,7 @@
 	<div class="space">
 	{% for course in hot_five %}
 		{%- if loop.index is odd %}
-		<div class="hot_cont">
+		<div class="hot_cont va_top">
 			<div class="course_about tc cp">
 				<div class="center_cont va_item">
 					<div>{{ course.teacher}}</div>
@@ -16,8 +16,8 @@
 			<div class="course_index tc">0{{ loop.index }}</div>
 		</div>
 		{%- else %}
-		<div class="hot_cont">
-			<div class="course_index">0{{ loop.index }}</div>
+		<div class="hot_cont va_top">
+			<div class="course_index tc">0{{ loop.index }}</div>
 			<div class="course_about tc cp">
 				<div class="center_cont va_item">
 					<div>{{ course.teacher}}</div>

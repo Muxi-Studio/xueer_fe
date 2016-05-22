@@ -10,7 +10,7 @@
 	box-sizing: border-box;
 	margin-top: 10px;
 	margin-right: 200px;
-	background: #FFFFFF;
+	background: $main_white;
 	padding: 42px 38px 60px 76px;
 	.head{
 		padding-bottom: 20px;
@@ -36,7 +36,7 @@
 	}
 	.comment{
 		margin-top:10px;
-		border-bottom: 1px solid #eeeeee;
+		border-bottom: 1px solid $font_grey_deep;
 	}
 	.avatar{
 		img {
@@ -50,8 +50,6 @@
 	.comment{
 		.content{
 			width: 600px;
-			display:inline-block;
-			vertical-align: top;
 			padding-left: 17px;
 		}
 		.top{
@@ -127,12 +125,13 @@
 			height: 40px;
 			line-height: 40px;
 			padding: 0 10px;
+			border: 2px solid $border_grey;
 			margin: 30px 0;
 		}
 		.pre_tag{
 			@include tag(14px);
 			font-weight: lighter;
-			color: #FFFFFF;
+			color: $main_white;
 			background: #CDCDCD;
 		}
 		.pre_tag:hover{
