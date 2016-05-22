@@ -4,8 +4,10 @@
     {{ super() }}
 {% endblock %}
 {% block content %}
+	{% include 'svg/index.html' %}
     {% include 'components/index/banner.html' %}
     {% include 'components/index/list.html' %}
     {% include 'components/index/hot.html' %}
     {% include 'components/index/guess.html' %}
+    <script src="/static/js/banner.bundle.js"></script>
 {% endblock %}

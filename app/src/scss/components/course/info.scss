@@ -44,7 +44,6 @@
 .info {
     .course_class {
         @include course_class(96px,96px,36px);
-        display: inline-block;
     }
     .course {
         background: $main_white;

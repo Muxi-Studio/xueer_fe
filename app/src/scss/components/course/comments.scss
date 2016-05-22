@@ -130,6 +130,7 @@
 		}
 		.pre_tag{
 			@include tag(14px);
+			margin-right: 10px;
 			font-weight: lighter;
 			color: $main_white;
 			background: #CDCDCD;
