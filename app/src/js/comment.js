@@ -12,40 +12,44 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 var  ReactCSSTransitionGroup = require('../node_modules/react/lib/ReactCSSTransitionGroup');
 
-class TagBox extends React.Component{
+class TagDeletable extends React.Component{
 	constructor(){
-		super();
-		this._onClickHandler = this._onClickHandler.bind(this);
-	}
-	_onClickHandler(){
-		this.props._onClickedHandler(this.props.data,this.props.id||null);
+		super()
+		this.state = {show:false}
 	}
 	render(){
-		return <span className="tag va_item" onClick={this._onClickHandler}>{ this.props.data }</span>
+		const showStyle = {display:'block'}
+		return <span className="tag va_item cp tag_warpper"
+		 onClick={() => this.props._onClickedHandler(this.props.data,this.props.id||null)} 
+		 onMouseEnter={() => this.setState({show:true})}
+		 onMouseLeave={() => this.setState({show:false})}>
+						{ this.props.data }
+						<span className="tag tag_overlay" style={this.state.show ? showStyle:null}>删除</span>
+					</span>
+
 	}
+}
+
+
+const Tag = (props) => {
+	return <span className="tag va_item cp tag_warpper"
+						onClick={() => props._onClickedHandler(props.data,props.id||null)}>
+						{ props.data }
+					</span>
 }
 
 const Tags = (props) => {
 	return <div className="tags va_item space">{ props.children }</div>
 }
 
-class HotTags extends React.Component{
-	constructor(){
-		super();
-		this._onClickedHandler = this._onClickedHandler.bind(this);
-	}
-	_onClickedHandler (data){
-		this.props._onAddHandler(data);
-	}
-	render(){
-		return <div className="hot_tags margin_auto space">{ this.props.children }</div>
-	}
+const HotTags = (props) => {
+	return <div className="hot_tags margin_auto space">{ props.children }</div>
 }
 
 class NewTag extends React.Component{
 	constructor(){
 		super();
-		this._onClickHandler = this._onClickHandler.bind(this);
+		this._onKeyDownHandler = this._onKeyDownHandler.bind(this);
 	}
 	_onClickHandler(){
 		var value = this.refs.input.value;
@@ -54,9 +58,20 @@ class NewTag extends React.Component{
 		}
 		this.refs.input.value = null;
 	}
+	_onKeyDownHandler(e){
+		if (e.keyCode == 32){
+			e.preventDefault();
+			this.props._onAddHandler(e.target.value);
+			e.target.value = null;
+			e.target.focus();
+		}
+		//if(e.key == "Backspace" && e.target.value == ""){
+		//	this._onRemoveDataHandler();
+		//}
+	}
 	render(){
 		return <div className="new_tag va_item">
-						<input type="text" className="new_tag_input" placeholder="输入标签，用空格间隔" ref="input"></input>
+						<input type="text" className="new_tag_input" placeholder="输入标签，用空格间隔" ref="input" onKeyDown={this._onKeyDownHandler}/>
 			    </div>
 	}
 }
@@ -73,30 +88,31 @@ class CommentBox extends React.Component {
 		var arr = this.state.tags
 		for(var i=0;i<arr.length;i++){
 			if(arr[i] === val){
-				alert("重复了二货！！")
+				alert("请勿重复添加！")
 				return;
 			}
 		}
 		this.setState({tags: this.state.tags.concat(val)})
 	}
 	_onDeleteDataHandler(val,id){
+		console.log(val,id)
 		var temp_arr = this.state.tags;
 		temp_arr.splice(id, 1);
 		this.setState({tags: temp_arr});
 	}
 	render() {
   		var hot_tags = [],current_tags = [];
-  	 	this.props.hot_tags.map((x,i) => hot_tags.push(<TagBox key={i} data={x} _onClickedHandler={this._onAddDataHandler}/>));
-  	 	this.state.tags.map((x,i) => current_tags.push(<TagBox key={i} data={x} id={i} _onClickedHandler={this._onDeleteDataHandler}/>));
+  	 	this.props.hot_tags.map((x,i) => hot_tags.push(<Tag key={i} data={x} _onClickedHandler={this._onAddDataHandler}/>));
+  	 	this.state.tags.map((x,i) => current_tags.push(<TagDeletable key={i} data={x} id={i} _onClickedHandler={this._onDeleteDataHandler}/>));
      	return  <form action="/add_comment/" method="post" className="form">
      				<textarea className="textarea"></textarea>
      				<div className="tags_box space">
      					<Tags>
-     				 		<ReactCSSTransitionGroup transitionName="tags" transitionAppearTimeout={300} transitionEnterTimeout={300} transitionLeaveTimeout={3000}>
+     				 		<ReactCSSTransitionGroup transitionName="tags" transitionAppearTimeout={300} transitionEnterTimeout={300} transitionLeaveTimeout={300}>
      						{current_tags}
      						</ReactCSSTransitionGroup>
      					</Tags>
-     					<NewTag _onClickedHandler={this._onAddDataHandler}/>
+     					<NewTag _onClickedHandler={this._onAddDataHandler} _onAddHandler={this._onAddDataHandler}/>
      				</div>
      				<div className="tag_head">
         				热门标签，点击直接添加
