@@ -5,31 +5,30 @@ login.scss
 	width: 100%;
 	background: $bg_grey_color;
 	form{
-		position: absolute;
-		top: 100px;
 		input{
 			height: 40px;
 			width: 240px;
-			color: $font_black_middle;
 			line-height: 40px;
-			padding: 0px 15px;
 			box-sizing:border-box;
-			font-size: 20px;
 			margin: 10px 0;
+		}
+		input[type=text] {
+			font-size: 20px;
+			color: $font_black_middle;
+			padding: 0px 15px;
 			border: 1px solid $font_black_middle;
 		}
 		input[type=submit] {
 			background: $font_red_deep;
 			color: $main_white;
+			font-size: 18px;
 			margin-top: 25px;
-			border: 0;
 			cursor: pointer;
 		}
 		.forget{
 			line-height: 20px;
 			text-align: right;
 			color: $font_red_deep;
-			margin-right: 35px;
 		}
 	}
 	.login {
@@ -109,7 +108,7 @@ login.scss
 	    bottom: -73px;
 	}
 	.log_option{
-		margin-top: 40px;
+		margin: 40px 0 20px;
 		p{
 			color: $font_grey_light;
 			font-size: 22px;

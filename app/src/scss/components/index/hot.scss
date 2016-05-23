@@ -19,6 +19,9 @@
 		line-height: 12px;
 		color: $main_green;
 	}
+	.course_about {
+		font-weight: lighter;
+	}
 	.course_about,
 	.course_index {
 		width: 140px;
@@ -30,12 +33,15 @@
 		line-height: 18px;
 	}
 	.course_about:nth-child(odd) {
-		border-top: 2px;
-		border-bottom: 2px;
+		border: 2px solid $main_green;
 		border-left: 0;
 		border-right: 0;
-		border-style: solid;
-		border-color: $main_green;
+	}
+	.course_about:nth-child(even) {
+		border: 2px solid $main_green;
+		border-bottom: 0;
+		border-left: 0;
+		border-right: 0;
 	}
 	.course_index {
 		font-size: 35px;
@@ -45,8 +51,8 @@
 	}
 	.hot_cont:nth-child(even) {
 		border: 2px;
-		border-top: 0;
 		border-color: $main_green;
+		border-top: 2px solid $main_white;
 		border-style:solid;
 	}
 	.hot_cont:nth-child(3) {

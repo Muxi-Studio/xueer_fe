@@ -1,21 +1,27 @@
+.hot_course {
+	padding-left: 127px;
+	padding-right: 127px;
+}
 .guess_cont {
 	padding: 5px 0 110px;
 	font-weight: lighter;
 	color: $main_white;
 	.outer {
-		width: 170px;
+		width: 175px;
 		display: inline-block;
-		margin-right: 10px;
+		margin-right: 15px;
 		.hover_rbt {
 			width: 60px;
 			height: 30px;
 			display: block;
 			visibility:hidden;
-			margin-bottom: -2px;
+			margin-bottom: -4px;
 		}
-		.course_about {
+		.course_info {
 			height: 107px;
+			width: 100%;
 			line-height: 107px;
+			border-top: 0;
 			background: $bg_red_light;
 		}
 		.center_cont {
@@ -29,7 +35,7 @@
 			font-size: 12px;
 		}
 	}
-	.course_about:hover {
+	.course_info:hover {
 		background: $font_red_deep;
 	}
 	.outer:last-child {

@@ -2,7 +2,6 @@
  xueer component index_list
  authored by zindex
 ***/
-
 .hot_courses{
 	width: 1000px;
 	box-sizing: border-box;
@@ -75,6 +74,15 @@
 		}
 		.course_class {
 			margin-left: 40px;
+		}
+	}
+	.item:hover {
+		.list_tag {
+			border-color: $font_red_deep; 
+		}
+		.teacher,
+		a{
+			color: $font_red_deep;
 		}
 	}
 }
