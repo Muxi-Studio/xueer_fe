@@ -8,9 +8,7 @@
 @mixin tag($font-size){
 	font-size: $font-size;
 	padding: 3px 14px;
-	display:inline-block;
 	text-align: center;
-	transition:all;
 }
 @mixin course_class($width,$height,$size){
 	width: $width;

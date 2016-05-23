@@ -94,7 +94,7 @@
 		.avatar {
 			margin-right: 10px;
 		}
-		.new_comment {
+		.textarea {
 			width: 608px;
 			height: 200px;
 			padding: 10px;
@@ -120,23 +120,37 @@
 			color: $main_green;
 			margin-bottom: 10px;
 		}
-		.new_tags{
+		.tags_box{
 			width: 584px;
-			height: 40px;
+			min-height: 40px;
 			line-height: 40px;
 			padding: 0 10px;
 			border: 2px solid $border_grey;
 			margin: 30px 0;
 		}
-		.pre_tag{
+		.tag{
 			@include tag(14px);
 			font-weight: lighter;
 			color: $main_white;
 			background: #CDCDCD;
+			line-height: 14px;
+			margin-right:10px;
 		}
 		.pre_tag:hover{
 			color: $font_blue_light;
 			background: $main_orange;
+		}
+		.comment_tags_input{
+			display:none;
+		}
+		.new_tag{
+			height: 100%;
+		}
+		.new_tag_input{
+			line-height:40px;
+		}
+		.tags{
+			line-height: 40px;
 		}
 	}
 }

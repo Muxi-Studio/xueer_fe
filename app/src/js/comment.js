@@ -21,15 +21,12 @@ class TagBox extends React.Component{
 		this.props._onClickedHandler(this.props.data,this.props.id||null);
 	}
 	render(){
-		return <span className="tag" onClick={this._onClickHandler}>{ this.props.data }</span>
+		return <span className="tag va_item" onClick={this._onClickHandler}>{ this.props.data }</span>
 	}
 }
 
-class Tags extends React.Component{
-
-	render(){
-		return <div className="tags margin_auto space">{ this.props.children }</div>
-	}
+const Tags = (props) => {
+	return <div className="tags va_item space">{ props.children }</div>
 }
 
 class HotTags extends React.Component{
@@ -58,10 +55,9 @@ class NewTag extends React.Component{
 		this.refs.input.value = null;
 	}
 	render(){
-		return <div className="new_tag margin_auto">
-				<input type="text" className="new_tag_input" placeholder="创建新标签" ref="input"></input>
-				<span className="new_tag_button cp" onClick={this._onClickHandler}></span>
-			   </div>
+		return <div className="new_tag va_item">
+						<input type="text" className="new_tag_input" placeholder="输入标签，用空格间隔" ref="input"></input>
+			    </div>
 	}
 }
 
@@ -92,30 +88,33 @@ class CommentBox extends React.Component {
   		var hot_tags = [],current_tags = [];
   	 	this.props.hot_tags.map((x,i) => hot_tags.push(<TagBox key={i} data={x} _onClickedHandler={this._onAddDataHandler}/>));
   	 	this.state.tags.map((x,i) => current_tags.push(<TagBox key={i} data={x} id={i} _onClickedHandler={this._onDeleteDataHandler}/>));
-     	return  <form action="#" method="post" className="form">
+     	return  <form action="/add_comment/" method="post" className="form">
      				<textarea className="textarea"></textarea>
-     				<Tags>
-     				 	<ReactCSSTransitionGroup transitionName="tags" transitionAppearTimeout={300} transitionEnterTimeout={300} transitionLeaveTimeout={3000}>
+     				<div className="tags_box space">
+     					<Tags>
+     				 		<ReactCSSTransitionGroup transitionName="tags" transitionAppearTimeout={300} transitionEnterTimeout={300} transitionLeaveTimeout={3000}>
      						{current_tags}
-     					</ReactCSSTransitionGroup>
-     				</Tags>
-     				<div className="head">
-        				<span className="head_txt tag_head_text">选择添加标签</span>
+     						</ReactCSSTransitionGroup>
+     					</Tags>
+     					<NewTag _onClickedHandler={this._onAddDataHandler}/>
+     				</div>
+     				<div className="tag_head">
+        				热门标签，点击直接添加
     				</div>
     				<HotTags _onAddHandler={this._onAddDataHandler}>{hot_tags}</HotTags>
-    				<NewTag _onClickedHandler={this._onAddDataHandler}/>
     				<input type="text" value={ this.state.tags.join(" ")} className="comment_tags_input"></input>
-    				<button type="submit" className="comment_submit">发布评论</button>
+    				<button type="submit" className="submit_bt tc margin_auto">发布评论</button>
      			</form>
   }
 }
-//init comment box
-if (document.querySelector(".comment_box")){
-	var tags = document.querySelector(".comment_box").innerHTML.split(" ");
-	ReactDOM.render( <CommentBox  hot_tags={tags}/> , document.querySelector(".comment_box"));
-}
 
 //init comment box
-if (document.querySelector("#input_warpper")){
+if (document.querySelector(".comment_box_x")){
+	var tags = document.querySelector(".comment_box_x").innerHTML.split(" ");
+	ReactDOM.render( <CommentBox  hot_tags={tags}/> , document.querySelector(".comment_box_x"));
+}
+
+//init search box
+if (document.querySelector("#xinput_warpper")){
 	ReactDOM.render( <SearchComponent/> , document.querySelector("#input_warpper"));
 }

@@ -43,12 +43,7 @@ var devConfig = {
 	},
 	resolve: {
 		root: __dirname,
-		extensions: ['','.js','.jsx','scss','css','png','jpg','jpeg'],
-		alias: {
-			'react': path.join('node_modules','/react/react.js'),
-			'jquery': path.join('node_modules','/jquery/dist/jquery'),
-			'react-dom': path.join('node_modules','/react-dom/dist/react-dom'),
-		}
+		extensions: ['','.js','.jsx','scss','css','png','jpg','jpeg']
 	},
 	plugins: [
 	  new webpack.NoErrorsPlugin(),
