@@ -38,13 +38,13 @@
         margin-right: 47px;
     }
     .search {
-        width: 391px;
-        height: 40px;
-        margin-right: 40px;
+        width: 390px;
+        height: 80px;
+       line-height: 80px;
     }
     .log_button {
         font-size: 18px;
-        @include button(102px,
+        @include button(90px,
         40px,
         3px)
     }
@@ -53,16 +53,13 @@
     }
 }
 .search {
-    .form {
-        line-height: 40px;
-    }
     .input{
         font-size: 18px;
         padding-left: 12px;
     }
     .search_button {
-        line-height: 40px;
-        height: 40px;
+        line-height: 32px;
+        height: 32px;
         width:80px;
         background-color: $font_red_deep;
         border-radius: 0px 3px 3px 0px;
@@ -75,9 +72,9 @@
         position: relative;
     }
     .input_warpper{
-        height: 38px;
+        height: 30px;
         padding: 0 10px;
-        width: 270px;
+        width: 228px;
         font-size: 14px;
         border-radius: 3px 0px 0px 3px;
         border: 1px solid $font_red_deep;
@@ -87,20 +84,20 @@
 .nav {
     .item {
         height:100%;
-        line-height:76px;
+        line-height:75px;
         box-sizing: border-box;
         border-top: 5px solid $main_white;
         font-size: 20px;
-        margin-right: 46px;
     }
     .active {
         border-top-color: $font_red_deep;
     }
     .first{
+         margin-right: 70px;
         color: $font_red_deep;
     }
     .last{
-        margin-right: 73px;
+        margin-right: 115px;
         color: $font_black_middle;
     }
     .item:hover {

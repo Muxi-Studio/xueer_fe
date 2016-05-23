@@ -77,4 +77,13 @@
 			margin-left: 40px;
 		}
 	}
+	.item:hover {
+		.list_tag {
+			border-color: $font_red_deep; 
+		}
+		.teacher,
+		a{
+			color: $font_red_deep;
+		}
+	}
 }

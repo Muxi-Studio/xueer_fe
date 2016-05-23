@@ -9,6 +9,7 @@
 		line-height: 50px;
 		margin-bottom: 8px;
 		background: $main_white;
+		border-bottom: 3px solid $border_grey;
 	}
 	.head_txt{
 		font-size: 18px;
@@ -52,6 +53,11 @@
 			margin-left: 20px;
 			padding-left: 20px;
 			vertical-align: top;
+		}
+		.course_msg {
+			font-size: 14px;
+			font-weight: lighter;
+			color: $font_black_light;
 		}
 		.course_class {
 			@include course_class(80px,80px,36px);

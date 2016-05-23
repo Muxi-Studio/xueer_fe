@@ -69,7 +69,7 @@
         @include tag(18px);
         margin-right: 20px;
         border:2px solid $main_white;
-        background: $main_orange;
+        background: $bg_orange_middle;
     }
     .like_bt {
         padding: 20px 76px 26px 78px;
@@ -115,7 +115,7 @@
         line-height: 63px;
     }
     .tag:hover {
-        background-color: $main_orange;
+        background-color: $bg_orange_middle;
         border: 2px solid $font_blue_light;
         color: $main_white; 
     }
