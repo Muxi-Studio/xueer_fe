@@ -86,11 +86,15 @@
 }
 .nav {
     .item {
-        height:36px;
-        line-height:43px;
+        height:100%;
+        line-height:76px;
+        box-sizing: border-box;
+        border-top: 5px solid $main_white;
         font-size: 20px;
-        border-bottom: 2px solid $main_white;
         margin-right: 46px;
+    }
+    .active {
+        border-top-color: $font_red_deep;
     }
     .first{
         color: $font_red_deep;
