@@ -14,9 +14,6 @@
                         {{ comment.user_name }}
                         <span class="hot tc">hot</span>
                     </span>
-                    <span class="date">
-                        {{ comment.date }}
-                    </span>
                 </div>
                 <div class="body">
                     {{ comment.body }}
@@ -24,6 +21,9 @@
                 <div class="like">
                     赞同（{{ comment.like }}）
                 </div>
+                <span class="date">
+                    {{ comment.date }}
+                </span>
             </div>
         </div>
         {% endfor %}
@@ -42,9 +42,6 @@
                     <span class="username">
                         {{ comment.user_name }}
                     </span>
-                    <span class="date">
-                        {{ comment.date }}
-                    </span>
                 </div>
                 <div class="body">
                     {{ comment.body }}
@@ -52,6 +49,9 @@
                 <div class="like">
                     赞同（{{ comment.like }}）
                 </div>
+                <span class="date">
+                    {{ comment.date }}
+                </span>
             </div>
         </div>
         {% endfor %}

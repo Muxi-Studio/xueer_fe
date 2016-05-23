@@ -11,6 +11,7 @@
 
 .course_intro{
     display: inline-block;
+    border-left: 1px solid $border_grey;
     ul {
         margin: 0;
     }
@@ -36,7 +37,7 @@
         font-size: 14px;
         font-weight: lighter;
         line-height: 20px;
-        width: 504px;
+        width: 434px;
         margin-left: 70px;
         margin-top: 10px;
     }
@@ -44,10 +45,11 @@
 .info {
     .course_class {
         @include course_class(96px,96px,36px);
+        margin-right: 35px;
     }
     .course {
         background: $main_white;
-        padding: 40px 30px 40px 90px;
+        padding: 40px 30px 40px 80px;
         display:inline-block;
         width: 800px;
         box-sizing: border-box;
@@ -81,7 +83,7 @@
     }
     .num {
         font-size: 24px;
-        color: $main_orange;
+        color: $font_red_deep;
     }
     .count_text {
         font-size: 18px;
