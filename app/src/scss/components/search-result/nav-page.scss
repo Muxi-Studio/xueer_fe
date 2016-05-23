@@ -1,15 +1,22 @@
 .pager{
     	text-align: right;
         margin-top: 40px;
+        color: $main_white;
+        font-size: 14px;
     .item{
         line-height: 30px;
-    	margin-left:20px;
-        color: $font_black_deep;
+    	margin-left:15px;
+        display: inline-block;
         width: 30px;
         height: 30px;
+        background: #cdcdcd;
     }
     .current {
-        color: $main_orange;
+        background: $main_green;
+    }
+    .more {
+        color: #cdcdcd;
+        background: $main_white;
     }
     .hover_blue:hover{
         color: $font_blue_light;

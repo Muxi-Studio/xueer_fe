@@ -49,6 +49,7 @@
 	}
 	.comment{
 		.content{
+			display: inline-block;
 			width: 600px;
 			padding-left: 17px;
 		}
@@ -73,18 +74,23 @@
 			vertical-align: top;
 		}
 		.date{
-			font-size: 14px;
-			width:50%;
+			font-size: 12px;
+			color: $font_black_deep;
+			font-weight: lighter;
+			margin-left: 20px;
 			text-align: right;
 		}
 		.body{
+			padding:0 10px;
 			font-size: 14px;
-			color:$font_grey_light;
+			color: $font_black_deep;
 			line-height: 22px;
 			margin-bottom: 10px;
 		}
 		.like{
-			font-size: 14px;
+			width: 485px;
+			display: inline-block;
+			font-size: 12px;
 			color:$main_orange;
 			text-align: right;
 			margin-bottom: 20px;
@@ -130,6 +136,7 @@
 		}
 		.tag{
 			@include tag(14px);
+			margin-right: 10px;
 			font-weight: lighter;
 			color: $main_white;
 			background: #CDCDCD;
