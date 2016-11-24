@@ -2,7 +2,7 @@
 
 ###build
 
-在`app/src/`下  
+在`xueer_be/xueer/src/`下  
 
 安装依赖
 
@@ -15,7 +15,7 @@
 
 
 ###watch
-在`app/src/`下
+在`xueer_be/xueer/src/`下
 
 `npm run watch`
 
@@ -23,6 +23,6 @@
 
 ###run
 
-在`app/`下
+在`xueer_be/xueer/src/`下
 
 `python app.py`

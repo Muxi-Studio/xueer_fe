@@ -150,20 +150,20 @@
         .new_tag_input {
             line-height: 36px;
         }
-        .tag_warpper{
-					position:relative;
-					margin-right: 10px;
-					background: $bg_cd;
+        .tag_warpper {
+            position: relative;
+            margin-right: 10px;
+            background: $bg_cd;
         }
-        .tag_overlay{
-        	position:absolute;
-        	top:0px;
-        	left:0px;
-        	width:100%;
-        	min-width: 56px;
-        	background-color: $bg_orange;
-        	display:none;
-        	box-sizing:border-box;
+        .tag_overlay {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            min-width: 56px;
+            background-color: $bg_orange;
+            display: none;
+            box-sizing: border-box;
         }
         // transition css
         .tags-enter {
@@ -181,4 +181,4 @@
             transition: opacity 300ms ease-in;
         }
     }
-
+}
