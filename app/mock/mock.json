@@ -1,0 +1,51 @@
+{
+  "routes" : [
+    {
+      "name": "index",
+      "endpoint": "/",
+      "template": "./pages/index",
+      "async": false
+    },
+    {
+      "name": "course",
+      "endpoint": "/course",
+      "template": "./pages/course",
+      "async": false
+    },
+    {
+      "name": "category",
+      "endpoint": "/category",
+      "template": "./pages/category",
+      "async": false
+    },
+    {
+      "name": "search-result",
+      "endpoint": "/search-result",
+      "template": "./pages/search-result",
+      "async": false
+    },
+    {
+      "name": "404",
+      "endpoint": "/404",
+      "template": "./pages/404",
+      "async": false
+    },
+    {
+      "name": "login",
+      "endpoint": "/login",
+      "template": "./pages/login",
+      "async": false
+    },
+    {
+      "name": "register",
+      "endpoint": "/register",
+      "template": "./pages/register",
+      "async": false
+    }
+  ],
+
+  "data": {
+
+  }
+
+}

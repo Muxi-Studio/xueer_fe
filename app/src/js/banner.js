@@ -189,7 +189,7 @@ var $ = require('jquery');
  */
  var banner = (function() {
 
-	var 
+	var
 		$main = $( '.banner' ),
 		$pages = $main.children( 'div.item' ),
 
@@ -212,7 +212,7 @@ var $ = require('jquery');
 		support = Modernizr.cssanimations;
         var dots = document.querySelectorAll('.banner .dots .dot');
         dots[current].className += ' current_dot ';
-	
+
 	function init() {
 
 		$pages.each( function() {
@@ -233,10 +233,10 @@ var $ = require('jquery');
                 next = 0;
             }
 			nextPage( animcursor );
-		} 
+		}
 		window.setInterval(auto,8000);
 
-		for( var i = 0; i < pagesCount; i++ ){      	
+		for( var i = 0; i < pagesCount; i++ ){
     	      manaul(dots[i], i);
 			}
 
@@ -267,14 +267,14 @@ var $ = require('jquery');
         }
 
 		isAnimating = true;
-		
+
 		var $currPage = $pages.eq( current );
         dots[current].className = dots[current].className.replace( /current_dot/,' ' );
 
 		current = next;
 
 		var $nextPage = $pages.eq( current ).addClass( 'current' ),
-			
+
 			outClass = '', inClass = '';
         dots[current].className += ' current_dot ';
 

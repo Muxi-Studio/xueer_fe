@@ -8,7 +8,7 @@
     <meta name="description" content="学而是华中师范大学唯一学生课程信息平台" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <link rel="icon" type="image/png" sizes="96x96" href="/static/images/favicon-96x96.png">
-    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/main.bundle.css">
     <title>{% block title %}{% endblock %}</title>
     {% endblock %}
 </head>
@@ -17,9 +17,10 @@
 {% include 'svg/rbt_logo.html' %}
 {% include 'svg/search.html' %}
 {% include 'svg/rbt.html' %}
+
 {% include 'components/header.html' %}
 {% block content %}{% endblock %}
 {% include 'components/footer.html' %}
-<script src="/static/js/main.bundle.js"></script>
+<!-- <script src="/static/main.bundle.js"></script> -->
 </body>
 </html>

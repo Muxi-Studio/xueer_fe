@@ -1,5 +1,4 @@
-app/src/node_modules
-app/src/.*
+app/node_modules
 *.log.*
 app/static/css/*.css
 app/static/css/*.css.map
@@ -7,7 +6,5 @@ app/static/js/
 app/src/.sass-cache/**
 *.log
 **/.sass-cache
-**/.sass-cache/*
-**/*.log
 
 
